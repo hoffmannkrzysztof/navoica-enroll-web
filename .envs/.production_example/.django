@@ -2,11 +2,11 @@
 # ------------------------------------------------------------------------------
 # DJANGO_READ_DOT_ENV_FILE=True
 DJANGO_SETTINGS_MODULE=config.settings.production
-DJANGO_SECRET_KEY=8zqaTVpMGbAJ6mKdTsdgzyxB9MZuvMf3tqtMg1ZlzAdIpzTYbDXfKw53HVdRCM8n
-DJANGO_ADMIN_URL=1cRZoUN1Xxg9mtE203MqvKZFlNneVnAg/
-DJANGO_ALLOWED_HOSTS=.enroll.navoica.pl
-DOMAIN=enroll.navoica.pl
-NAVOICA_URL=https://draft.navoica.pl
+DJANGO_SECRET_KEY=
+DJANGO_ADMIN_URL=admin/
+DJANGO_ALLOWED_HOSTS=
+DOMAIN=
+NAVOICA_URL=
 
 # Security
 # ------------------------------------------------------------------------------
