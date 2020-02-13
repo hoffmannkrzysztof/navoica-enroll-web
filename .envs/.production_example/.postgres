@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=navoica_enroll
+POSTGRES_USER=hMUUitxPoCPhwlziPBKhSOHrYhnqDmij
+POSTGRES_PASSWORD=advrqRsQdWw6w4ixz0oAdG43z6qQfhwGJOVszjBEKWbC9M2ECGREXFVPBm2GJSiL

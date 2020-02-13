@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags  i18n %}
+
+{% block title %}{% trans "Register for a course: " %}
+  {{ course_info.name }}{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Register for a course: " %}<small>{{ course_info.name }}</small>
+  </h1>
+  {% crispy form %}
+{% endblock %}

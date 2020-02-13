@@ -1,0 +1,5 @@
+[run]
+include = navoica_enroll/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
