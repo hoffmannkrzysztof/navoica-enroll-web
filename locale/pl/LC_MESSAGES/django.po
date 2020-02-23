@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 13:37+0000\n"
+"POT-Creation-Date: 2020-02-23 19:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,61 +29,61 @@ msgstr ""
 msgid "This account is inactive."
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:7
+#: navoica_enroll/templates/account/email.html:6
 msgid "Account"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:10
+#: navoica_enroll/templates/account/email.html:9
 msgid "E-mail Addresses"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:13
+#: navoica_enroll/templates/account/email.html:12
 msgid "The following e-mail addresses are associated with your account:"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:27
+#: navoica_enroll/templates/account/email.html:30
 msgid "Verified"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:29
+#: navoica_enroll/templates/account/email.html:32
 msgid "Unverified"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:31
+#: navoica_enroll/templates/account/email.html:35
 msgid "Primary"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:37
+#: navoica_enroll/templates/account/email.html:42
 msgid "Make Primary"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:38
+#: navoica_enroll/templates/account/email.html:44
 msgid "Re-send Verification"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:39
+#: navoica_enroll/templates/account/email.html:46
 msgid "Remove"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:46
+#: navoica_enroll/templates/account/email.html:54
 msgid "Warning:"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:46
+#: navoica_enroll/templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:51
+#: navoica_enroll/templates/account/email.html:60
 msgid "Add E-mail Address"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:56
+#: navoica_enroll/templates/account/email.html:66
 msgid "Add E-mail"
 msgstr ""
 
-#: navoica_enroll/templates/account/email.html:66
+#: navoica_enroll/templates/account/email.html:76
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
@@ -95,25 +95,28 @@ msgstr ""
 #: navoica_enroll/templates/account/email_confirm.html:16
 #, python-format
 msgid ""
-"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
-"address for user %(user_display)s."
+"Please\n"
+"      confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail\n"
+"      address for user %(user_display)s."
 msgstr ""
 
-#: navoica_enroll/templates/account/email_confirm.html:20
+#: navoica_enroll/templates/account/email_confirm.html:24
 msgid "Confirm"
 msgstr ""
 
-#: navoica_enroll/templates/account/email_confirm.html:27
+#: navoica_enroll/templates/account/email_confirm.html:31
 #, python-format
 msgid ""
-"This e-mail confirmation link expired or is invalid. Please <a href="
-"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+"This e-mail confirmation link expired or is invalid.\n"
+"      Please\n"
+"      <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>\n"
+"      ."
 msgstr ""
 
 #: navoica_enroll/templates/account/login.html:7
 #: navoica_enroll/templates/account/login.html:11
-#: navoica_enroll/templates/account/login.html:42
-#: navoica_enroll/templates/base.html:66
+#: navoica_enroll/templates/account/login.html:45
+#: navoica_enroll/templates/base.html:78
 msgid "Sign In"
 msgstr ""
 
@@ -125,17 +128,17 @@ msgstr ""
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
-"<a href=\"%(signup_url)s\">sign up</a> first."
+"      <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 
-#: navoica_enroll/templates/account/login.html:41
+#: navoica_enroll/templates/account/login.html:43
 msgid "Forgot Password?"
 msgstr ""
 
 #: navoica_enroll/templates/account/logout.html:5
 #: navoica_enroll/templates/account/logout.html:8
-#: navoica_enroll/templates/account/logout.html:17
-#: navoica_enroll/templates/base.html:57
+#: navoica_enroll/templates/account/logout.html:18
+#: navoica_enroll/templates/base.html:67
 msgid "Sign Out"
 msgstr ""
 
@@ -145,9 +148,9 @@ msgstr ""
 
 #: navoica_enroll/templates/account/password_change.html:6
 #: navoica_enroll/templates/account/password_change.html:9
-#: navoica_enroll/templates/account/password_change.html:14
+#: navoica_enroll/templates/account/password_change.html:16
 #: navoica_enroll/templates/account/password_reset_from_key.html:5
-#: navoica_enroll/templates/account/password_reset_from_key.html:8
+#: navoica_enroll/templates/account/password_reset_from_key.html:9
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:4
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:7
 msgid "Change Password"
@@ -166,44 +169,47 @@ msgid ""
 "an e-mail allowing you to reset it."
 msgstr ""
 
-#: navoica_enroll/templates/account/password_reset.html:21
+#: navoica_enroll/templates/account/password_reset.html:23
 msgid "Reset My Password"
 msgstr ""
 
-#: navoica_enroll/templates/account/password_reset.html:24
-msgid "Please contact us if you have any trouble resetting your password."
+#: navoica_enroll/templates/account/password_reset.html:26
+msgid ""
+"Please contact us if you have any trouble resetting your\n"
+"    password."
 msgstr ""
 
 #: navoica_enroll/templates/account/password_reset_done.html:15
 msgid ""
-"We have sent you an e-mail. Please contact us if you do not receive it "
-"within a few minutes."
+"We have sent you an e-mail. Please contact us if you do not\n"
+"    receive it within a few minutes."
 msgstr ""
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
 msgstr ""
 
-#: navoica_enroll/templates/account/password_reset_from_key.html:12
+#: navoica_enroll/templates/account/password_reset_from_key.html:13
 #, python-format
 msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
-"a>."
+"The password reset link was invalid, possibly because it\n"
+"      has already been used.  Please request a\n"
+"      <a href=\"%(passwd_reset_url)s\">new password reset</a>\n"
+"      ."
 msgstr ""
 
-#: navoica_enroll/templates/account/password_reset_from_key.html:18
+#: navoica_enroll/templates/account/password_reset_from_key.html:23
 msgid "change password"
 msgstr ""
 
-#: navoica_enroll/templates/account/password_reset_from_key.html:21
+#: navoica_enroll/templates/account/password_reset_from_key.html:26
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:8
 msgid "Your password is now changed."
 msgstr ""
 
 #: navoica_enroll/templates/account/password_set.html:6
 #: navoica_enroll/templates/account/password_set.html:9
-#: navoica_enroll/templates/account/password_set.html:14
+#: navoica_enroll/templates/account/password_set.html:16
 msgid "Set Password"
 msgstr ""
 
@@ -212,15 +218,16 @@ msgid "Signup"
 msgstr ""
 
 #: navoica_enroll/templates/account/signup.html:9
-#: navoica_enroll/templates/account/signup.html:19
-#: navoica_enroll/templates/base.html:62
+#: navoica_enroll/templates/account/signup.html:22
+#: navoica_enroll/templates/base.html:73
 msgid "Sign Up"
 msgstr ""
 
 #: navoica_enroll/templates/account/signup.html:11
 #, python-format
 msgid ""
-"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+"Already have an account? Then please\n"
+"    <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
 
 #: navoica_enroll/templates/account/signup_closed.html:5
@@ -241,38 +248,40 @@ msgstr ""
 
 #: navoica_enroll/templates/account/verification_sent.html:10
 msgid ""
-"We have sent an e-mail to you for verification. Follow the link provided to "
-"finalize the signup process. Please contact us if you do not receive it "
-"within a few minutes."
+"We have sent an e-mail to you for verification. Follow the\n"
+"    link provided to finalize the signup process. Please contact us if you "
+"do\n"
+"    not receive it within a few minutes."
 msgstr ""
 
 #: navoica_enroll/templates/account/verified_email_required.html:12
 msgid ""
 "This part of the site requires us to verify that\n"
-"you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your e-mail address. "
+"    you are who you claim to be. For this purpose, we require that you\n"
+"    verify ownership of your e-mail address. "
 msgstr ""
 
 #: navoica_enroll/templates/account/verified_email_required.html:16
 msgid ""
 "We have sent an e-mail to you for\n"
-"verification. Please click on the link inside this e-mail. Please\n"
-"contact us if you do not receive it within a few minutes."
+"    verification. Please click on the link inside this e-mail. Please\n"
+"    contact us if you do not receive it within a few\n"
+"    minutes."
 msgstr ""
 
-#: navoica_enroll/templates/account/verified_email_required.html:20
+#: navoica_enroll/templates/account/verified_email_required.html:21
 #, python-format
 msgid ""
-"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
-"mail address</a>."
+"<strong>Note:</strong> you can still\n"
+"    <a href=\"%(email_url)s\">change your e-mail address</a>."
 msgstr ""
 
-#: navoica_enroll/templates/base.html:53
+#: navoica_enroll/templates/base.html:62
 msgid "My Profile"
 msgstr "Mój prodil"
 
 #: navoica_enroll/templates/users/form_registration.html:4
-#: navoica_enroll/templates/users/form_registration.html:7
+#: navoica_enroll/templates/users/form_registration.html:8
 msgid "Register for a course: "
 msgstr "Zarejestruj się na kurs: "
 
@@ -280,195 +289,217 @@ msgstr "Zarejestruj się na kurs: "
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: navoica_enroll/users/forms.py:22
+#: navoica_enroll/users/forms.py:23
 msgid "This username has already been taken."
 msgstr "Ta nazwa jest już zajęta"
 
-#: navoica_enroll/users/forms.py:52
+#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:46
+msgid "Postal code"
+msgstr "Kod pocztowy"
+
+#: navoica_enroll/users/forms.py:44
+#| msgid "E-mail"
+msgid "E-mail address"
+msgstr "Adres poczty elektronicznej"
+
+#: navoica_enroll/users/forms.py:47
+msgid "I accept the statement of the Project participant. <a href='{}'>PDF</a>"
+msgstr "Akceptuję oświadczenie uczestnika projektu. <a href='{}'> PDF </a>"
+
+#: navoica_enroll/users/forms.py:50
+msgid ""
+"I agree to the processing of personal data for the purposes of participation "
+"in the project. <a href='{}'>PDF</a>"
+msgstr "Wyrażam zgodę na przetwarzanie danych osobowych w celu uczestnictwa w projekcie. <a href='{}'> PDF </a>"
+
+#: navoica_enroll/users/forms.py:61
 msgid "Participant details"
 msgstr "Dane uczestnika"
 
-#: navoica_enroll/users/forms.py:79
+#: navoica_enroll/users/forms.py:88
 msgid "Contact details"
 msgstr "Dane do kontaktu"
 
-#: navoica_enroll/users/forms.py:128
+#: navoica_enroll/users/forms.py:137
 msgid "Details and type of support"
 msgstr "Szczegóły i rodzaj wsparcia"
 
-#: navoica_enroll/users/forms.py:181
-msgid "Save and register me on the course"
+#: navoica_enroll/users/forms.py:195
+#| msgid "Save and register me on the course"
+msgid "Send the form and register me for the course"
 msgstr "Zapisz i zarejestruj mnie na kurs"
 
 #: navoica_enroll/users/models.py:13
 msgid "Name of User"
 msgstr "Nazwa użytkownika"
 
-#: navoica_enroll/users/models.py:20
+#: navoica_enroll/users/models.py:22
 msgid "First Name"
 msgstr "Imię"
 
-#: navoica_enroll/users/models.py:21
+#: navoica_enroll/users/models.py:23
 msgid "Last name"
 msgstr "Nazwisko"
 
-#: navoica_enroll/users/models.py:22
+#: navoica_enroll/users/models.py:24
 msgid "Gender"
 msgstr "Płeć"
 
-#: navoica_enroll/users/models.py:23
+#: navoica_enroll/users/models.py:25
 msgid "Male"
 msgstr "Mężczyzna"
 
-#: navoica_enroll/users/models.py:24
+#: navoica_enroll/users/models.py:26
 msgid "Female"
 msgstr "Kobieta"
 
-#: navoica_enroll/users/models.py:26
+#: navoica_enroll/users/models.py:28
 msgid "Pesel"
 msgstr "PESEL"
 
-#: navoica_enroll/users/models.py:27
+#: navoica_enroll/users/models.py:29
 msgid "For people who do not have a PESEL number, type in NONE."
 msgstr "Podaj wiek w chwili przystąpienia do projektu"
 
-#: navoica_enroll/users/models.py:28
+#: navoica_enroll/users/models.py:30
 msgid "Age"
 msgstr "Wiek"
 
-#: navoica_enroll/users/models.py:29
-msgid "Enter your age when joining the project"
-msgstr ""
-
-#: navoica_enroll/users/models.py:30
+#: navoica_enroll/users/models.py:31
 msgid "Education"
 msgstr "Wykształcenie"
 
-#: navoica_enroll/users/models.py:42
+#: navoica_enroll/users/models.py:40
 msgid "Street"
 msgstr "Ulica"
 
-#: navoica_enroll/users/models.py:43
+#: navoica_enroll/users/models.py:41
 msgid "Enter the address correspondence."
 msgstr "Należy podać adres kontaktowy, korespondencyjny."
 
-#: navoica_enroll/users/models.py:44
+#: navoica_enroll/users/models.py:42
 msgid "Street no"
 msgstr "Nr budynku"
 
-#: navoica_enroll/users/models.py:45 navoica_enroll/users/models.py:47
+#: navoica_enroll/users/models.py:43 navoica_enroll/users/models.py:45
 msgid "May contain letters"
 msgstr "Może zawierać litery"
 
-#: navoica_enroll/users/models.py:46
+#: navoica_enroll/users/models.py:44
 msgid "Building no"
 msgstr "Nr lokalu"
 
-#: navoica_enroll/users/models.py:48
-msgid "Postal code"
-msgstr "Kod pocztowy"
-
-#: navoica_enroll/users/models.py:49
+#: navoica_enroll/users/models.py:47
 msgid "City"
 msgstr "Miejscowość"
 
-#: navoica_enroll/users/models.py:50
+#: navoica_enroll/users/models.py:48
 msgid "Voivodeship"
 msgstr "Województwo"
 
-#: navoica_enroll/users/models.py:52
+#: navoica_enroll/users/models.py:50
 msgid "County"
 msgstr "Powiat"
 
-#: navoica_enroll/users/models.py:54
+#: navoica_enroll/users/models.py:52
 msgid "Commune"
 msgstr "Gmina"
 
-#: navoica_enroll/users/models.py:55
+#: navoica_enroll/users/models.py:53
 msgid "Phone"
 msgstr "Telefon kontaktowy"
 
-#: navoica_enroll/users/models.py:56
+#: navoica_enroll/users/models.py:54
 msgid "Provide the contact telephone number."
 msgstr "Należy podać numer telefonu do kontaktu."
 
-#: navoica_enroll/users/models.py:57
+#: navoica_enroll/users/models.py:55
 msgid "E-mail"
 msgstr "Adres poczty elektronicznej"
 
-#: navoica_enroll/users/models.py:58
+#: navoica_enroll/users/models.py:56
 msgid "Enter the address mail for contact."
-msgstr ""
+msgstr "Wpisz adres e-mail do kontaktu."
 
-#: navoica_enroll/users/models.py:59
+#: navoica_enroll/users/models.py:57
 msgid "Start project date"
 msgstr "Data rozpoczęcia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:61
+#: navoica_enroll/users/models.py:59
 msgid "End project date"
 msgstr "Data zakończenia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:63
+#: navoica_enroll/users/models.py:61
 msgid "Start support date"
 msgstr "Data rozpoczęcia otrzymania wsparcia"
 
-#: navoica_enroll/users/models.py:65
+#: navoica_enroll/users/models.py:70
 msgid "Status"
 msgstr "Status na rynku pracy osoby w chwili przystąpienia do projektu"
 
-#: navoica_enroll/users/models.py:72
+#: navoica_enroll/users/models.py:88
 msgid "Profession"
 msgstr "Wykonywany zawód"
 
-#: navoica_enroll/users/models.py:73
+#: navoica_enroll/users/models.py:92
 msgid "Work name"
 msgstr "Nazwa zakładu pracy"
 
-#: navoica_enroll/users/models.py:74
+#: navoica_enroll/users/models.py:93
 msgid "Abbreviations not allowed, full name of the institution"
 msgstr "Skróty nie dopuszczane, pełna nazwa instytucji"
 
-#: navoica_enroll/users/models.py:75
+#: navoica_enroll/users/models.py:94
 msgid "Origin"
 msgstr ""
 "Osoba należąca do mniejszości narodowej lub etnicznej, migrant, osoba obcego "
 "pochodzenia"
 
-#: navoica_enroll/users/models.py:77 navoica_enroll/users/models.py:84
-#: navoica_enroll/users/models.py:91 navoica_enroll/users/models.py:98
+#: navoica_enroll/users/models.py:96 navoica_enroll/users/models.py:103
+#: navoica_enroll/users/models.py:110 navoica_enroll/users/models.py:117
 msgid "Yes"
 msgstr "Tak"
 
-#: navoica_enroll/users/models.py:78 navoica_enroll/users/models.py:85
-#: navoica_enroll/users/models.py:92 navoica_enroll/users/models.py:99
+#: navoica_enroll/users/models.py:97 navoica_enroll/users/models.py:104
+#: navoica_enroll/users/models.py:111 navoica_enroll/users/models.py:118
 msgid "No"
 msgstr "Nie"
 
-#: navoica_enroll/users/models.py:79 navoica_enroll/users/models.py:86
-#: navoica_enroll/users/models.py:93 navoica_enroll/users/models.py:100
+#: navoica_enroll/users/models.py:98 navoica_enroll/users/models.py:105
+#: navoica_enroll/users/models.py:112 navoica_enroll/users/models.py:119
 msgid "Refusal"
 msgstr "Odmowa"
 
-#: navoica_enroll/users/models.py:83
+#: navoica_enroll/users/models.py:102
 msgid "Homeless"
 msgstr "Osoba bezdomna lub dotknięta wykluczeniem z dostępu do mieszkań"
 
-#: navoica_enroll/users/models.py:89
+#: navoica_enroll/users/models.py:108
 msgid "Disabled person"
 msgstr "Osoba z niepełnosprawnościami"
 
-#: navoica_enroll/users/models.py:96
+#: navoica_enroll/users/models.py:115
 msgid "Social disadvantage"
 msgstr "Osoba w innej niekorzystnej sytuacji społecznej"
 
-#: navoica_enroll/users/views.py:41
+#: navoica_enroll/users/models.py:131
+#| msgid "Register for a course: "
+msgid "Registration for course"
+msgstr "Zarejestruj się na kurs: "
+
+#: navoica_enroll/users/models.py:132
+#| msgid "Register for a course: "
+msgid "Registrations for course"
+msgstr "Zarejestruj się na kurs: "
+
+#: navoica_enroll/users/views.py:42
 msgid "Infos successfully updated"
 msgstr "Informacja zaaktualizowane"
 
-#: navoica_enroll/users/views.py:88
+#: navoica_enroll/users/views.py:89
 msgid "Course does not exist"
 msgstr "Kurs nieistnieje"
 
-#: navoica_enroll/users/views.py:107
+#: navoica_enroll/users/views.py:108
 msgid "Already enrollment for this course"
 msgstr "Jesteś już zapisany/a na kurs"

@@ -25,18 +25,14 @@ class UserRegistrationCourse(models.Model):
     ], max_length=1)
     pesel = models.CharField(_("Pesel"), max_length=11, help_text=_(
         "For people who do not have a PESEL number, type in NONE."))
-    age = models.SmallIntegerField(_("Age"), default=18, help_text=_(
-        "Enter your age when joining the project"))
+    age = models.SmallIntegerField(_("Age"), default=18)
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
-                                     ('1', 'podstawowe'),
-                                     ('2', 'gimnazjalne'),
-                                     ('3', 'policealne'),
-                                     ('4', 'pomaturalne'),
-                                     ('5', 'wyższe I stopnia licencjat'),
-                                     ('6', 'wyższe I stopnia inżynier'),
-                                     ('7', 'wyższe II stopnia'),
-                                     ('8', 'doktorat'),
+                                     ('1', 'niższe niż podstawowe'),
+                                     ('2', 'podstawowe'),
+                                     ('3', 'gimnazjalne'),
+                                     ('4', 'policealne'),
+                                     ('5', 'wyższe')
                                  ]
                                  )
     street = models.CharField(_("Street"), max_length=300,
@@ -48,9 +44,11 @@ class UserRegistrationCourse(models.Model):
     postal_code = models.CharField(_("Postal code"), max_length=6)
     city = models.CharField(_("City"), max_length=30)
     voivodeship = models.CharField(_("Voivodeship"), max_length=30,
-                                   choices=VOIVODESHIP_CHOICES)
+                                   choices=sorted(VOIVODESHIP_CHOICES,
+                                                  key=lambda x: x[1]))
     county = models.CharField(_("County"), max_length=30,
-                              choices=ADMINISTRATIVE_UNIT_CHOICES)
+                              choices=sorted(ADMINISTRATIVE_UNIT_CHOICES,
+                                             key=lambda x: x[1]))
     commune = models.CharField(_("Commune"), max_length=30)
     phone = models.CharField(_("Phone"), max_length=30, help_text=_(
         "Provide the contact telephone number."))
@@ -62,14 +60,34 @@ class UserRegistrationCourse(models.Model):
                                         default=timezone.now)
     start_support_date = models.DateField(_("Start support date"),
                                           default=timezone.now)
-    status = models.CharField(_("Status"), max_length=1,
-                              choices=[
-                                  ('e', 'Unemployment'),
-                                  ('n', 'No working'),
-                                  ('w', 'Working'),
-                              ]
+
+    status_txt = """osoba pracująca
+osoba bezrobotna zarejestrowana w ewidencji urzędów pracy
+osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy
+osoba bierna zawodowo"""
+
+    status = models.CharField(_("Status"), max_length=1000,
+                              choices=[(t, t) for t in status_txt.split("\n")]
                               )
-    profession = models.CharField(_("Profession"), max_length=1000)
+
+    profession_txt = """nauczyciel kształcenia zawodowego
+nauczyciel kształcenia ogólnego
+nauczyciel wychowania przedszkolnego
+pracownik instytucji szkolnictwa wyższego
+pracownik instytucji rynku pracy
+pracownik instytucji systemu ochrony zdrowia
+rolnik
+kluczowy pracownik instytucji pomocy i integracji społecznej
+pracownik instytucji systemu wspierania rodziny i pieczy zastępczej
+pracownik ośrodka wsparcia ekonomii społecznej
+pracownik poradni psychologiczno-pedagogicznej
+instruktor praktycznej nauki zawodu
+inny"""
+
+    profession = models.CharField(_("Profession"), max_length=1000,
+                                  choices=[(t, t) for t in
+                                           profession_txt.split("\n")])
+
     work_name = models.CharField(_("Work name"), max_length=1000, help_text=_(
         "Abbreviations not allowed, full name of the institution"))
     origin = models.CharField(_("Origin"), max_length=1,

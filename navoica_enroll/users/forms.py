@@ -2,8 +2,9 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import ButtonHolder, Div, Fieldset, HTML, Layout, \
     Submit
 from django.contrib.auth import forms, get_user_model
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.exceptions import ValidationError
-from django.forms import EmailField, ModelForm
+from django.forms import BooleanField, EmailField, ModelForm, TextInput
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.forms import PLPESELField, PLPostalCodeField
 
@@ -37,9 +38,17 @@ class UserCreationForm(forms.UserCreationForm):
 
 
 class UserRegistrationCourseForm(ModelForm):
-    pesel = PLPESELField()
-    postal_code = PLPostalCodeField()
-    email = EmailField()
+    pesel = PLPESELField(max_length=11,
+                         widget=TextInput(attrs={'type': 'number'}))
+    postal_code = PLPostalCodeField(label=_("Postal code"))
+    email = EmailField(label=_("E-mail address"))
+
+    statement1 = BooleanField(required=True, label=_(
+        "I accept the statement of the Project participant. <a href='{}'>PDF</a>").format(
+        static("pdfs/Wzór oświadczenia uczestnika Projektu.pdf")))
+    statement2 = BooleanField(required=True, label=_(
+        "I agree to the processing of personal data for the purposes of participation in the project. <a href='{}'>PDF</a>").format(
+        static("pdfs/Przetwarzanie danych.pdf")))
 
     def __init__(self, *args, **kwargs):
         super(UserRegistrationCourseForm, self).__init__(*args, **kwargs)
@@ -48,7 +57,7 @@ class UserRegistrationCourseForm(ModelForm):
         self.helper.layout = Layout(
             Fieldset(
                 '',
-                HTML('<p class="h6">{}</p><hr/>'.format(
+                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
                     _("Participant details"))),
                 Div(
                     Div('first_name',
@@ -75,7 +84,7 @@ class UserRegistrationCourseForm(ModelForm):
                     css_class="row"
                 ),
                 'education',
-                HTML('<p class="h6">{}</p><hr/>'.format(
+                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
                     _("Contact details"))),
                 Div(
                     Div('street',
@@ -124,7 +133,7 @@ class UserRegistrationCourseForm(ModelForm):
                     ),
                     css_class="row"
                 ),
-                HTML('<p class="h6">{}</p><hr/>'.format(
+                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
                     _("Details and type of support"))),
                 Div(
                     Div('start_project_date',
@@ -177,8 +186,13 @@ class UserRegistrationCourseForm(ModelForm):
 
             ),
             HTML("<hr/>"),
+
+            'statement1', 'statement2',
+
+            HTML("<hr/>"),
             ButtonHolder(
-                Submit('submit', _("Save and register me on the course"),
+                Submit('submit',
+                       _("Send the form and register me for the course"),
                        css_class='button white w-100')
             ),
             HTML("<br/>"),

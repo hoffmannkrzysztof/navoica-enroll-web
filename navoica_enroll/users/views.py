@@ -110,6 +110,13 @@ class UserRegistrationCourseView(FormView):
         return super(UserRegistrationCourseView, self).dispatch(request, *args,
                                                                 **kwargs)
 
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['email'] = self.request.user.email
+        initial['first_name'] = self.request.user.first_name
+        initial['last_name'] = self.request.user.last_name
+        return initial
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['course_info'] = self.course_info
