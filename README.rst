@@ -1,125 +1,65 @@
-Navoica Remote Enrollment for a Course
+Formularz Rejestacyjny Navoica
 ======================================
 
-Behold My Awesome Project!
 
-.. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-     :target: https://github.com/ambv/black
-     :alt: Black code style
+Przejdź do katalogu .envs i skopiuj domyślne ustawienia:
 
 
-:License: MIT
-
-
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
-
-Basic Commands
---------------
-
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
-
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
-* To create an **superuser account**, use this command::
-
-    $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Type checks
-^^^^^^^^^^^
-
-Running type checks with mypy:
-
-::
-
-  $ mypy navoica_enroll
-
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ pytest
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
+    cd .envs/
+    mv .production_example/ .production
 
 
 
+Edytuj wg potrzeby. Przykładowe wartości poniżej:
 
-Email Server
-^^^^^^^^^^^^
+    **.production/.django**
 
-In development, it is often nice to be able to see emails that are being sent from your application. For that reason local SMTP server `MailHog`_ with a web interface is available as docker container.
+    DJANGO_SECRET_KEY=8zqaTVpMGbAJ6mKdTsdfSDASswwdSfGSZlzAdIpzTYbDXfKw53HVdRCM8n
 
-Container mailhog will start automatically when you will run all docker containers.
-Please check `cookiecutter-django Docker documentation`_ for more details how to start all containers.
+    DJANGO_ADMIN_URL=admin/
 
-With MailHog running, to view messages that are sent by your application, open your browser and go to ``http://127.0.0.1:8025``
+    DJANGO_ALLOWED_HOSTS=.enroll.navoica.pl
 
-.. _mailhog: https://github.com/mailhog/MailHog
+    DOMAIN=enroll.navoica.pl
 
-
-
-Sentry
-^^^^^^
-
-Sentry is an error logging aggregator service. You can sign up for a free account at  https://sentry.io/signup/?code=cookiecutter  or download and host it yourself.
-The system is setup with reasonable defaults, including 404 logging and integration with the WSGI application.
-
-You must set the DSN url in production.
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
+    NAVOICA_URL=https://draft.navoica.pl
 
 
 
-Docker
-^^^^^^
+Zmodyfikuj ustawienia serwera HTTP:
 
-See detailed `cookiecutter-django Docker documentation`_.
+    cd compose/production/traefik/
 
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
+    mv traefik.yml.example traefik.yml
+
+    **Edytuj plik traefik.yml**
+
+    zmień zmienne __DOMAIN__ i __EMAIL__
+
+Pamiętaj żeby __DOMAIN__ było zgodne z ustawieniami w **.django** z **DOMAIN** i **DJANGO_ALLOWED_HOSTS**
+
+Budowanie i uruchamianie Dockera
+--------------------------------
+
+    docker-compose -f production.yml build
+
+    docker-compose -f production.yml up -d
+
+Po uruchomieniu uruchamiamy migracje danych i tworzymy własnego użytkownika admina
+
+    docker-compose -f production.yml exec django python manage.py migrate
+
+    docker-compose -f production.yml exec django python manage.py createsuperuser
 
 
+Przechodzimy do panelu administratora (adres może się różnić od wartości **DJANGO_ADMIN_URL**):
 
-Custom Bootstrap Compilation
-^^^^^^
+    https://enroll-test.navoica.pl/admin/
 
-The generated CSS is set up with automatic Bootstrap recompilation with variables of your choice.
-Bootstrap v4 is installed using npm and customised by tweaking your variables in ``static/sass/custom_bootstrap_vars``.
+Uzupełniamy iformacje o domenie zgodnie z **DOMAIN**
 
-You can find a list of available variables `in the bootstrap source`_, or get explanations on them in the `Bootstrap docs`_.
+    https://enroll-test.navoica.pl/admin/sites/site/1/change/
 
+Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
 
-
-.. _in the bootstrap source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-.. _Bootstrap docs: https://getbootstrap.com/docs/4.1/getting-started/theming/
-
-
+    https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
