@@ -10,7 +10,7 @@ class EdxAccount(ProviderAccount):
 
 class EdxProvider(OAuth2Provider):
     id = 'edx'
-    name = 'Edx'
+    name = 'Navoica.pl'
     account_class = EdxAccount
 
     def get_default_scope(self):

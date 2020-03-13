@@ -23,7 +23,7 @@ class UserRegistrationCourse(models.Model):
         ('M', _('Male')),
         ('F', _('Female')),
     ], max_length=1)
-    pesel = models.CharField(_("Pesel"), max_length=11, help_text=_(
+    pesel = models.CharField(_("PESEL"), max_length=11, help_text=_(
         "For people who do not have a PESEL number, type in NONE."))
     age = models.SmallIntegerField(_("Age"), default=18)
     education = models.CharField(_("Education"), max_length=1,
