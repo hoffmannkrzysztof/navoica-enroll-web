@@ -38,7 +38,7 @@ class UserCreationForm(forms.UserCreationForm):
 
 
 class UserRegistrationCourseForm(ModelForm):
-    pesel = PLPESELField(max_length=11,
+    pesel = PLPESELField(max_length=11, label=_("PESEL"),
                          widget=TextInput(attrs={'type': 'number'}))
     postal_code = PLPostalCodeField(label=_("Postal code"))
     email = EmailField(label=_("E-mail address"))

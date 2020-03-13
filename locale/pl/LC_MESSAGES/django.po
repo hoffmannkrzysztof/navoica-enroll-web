@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-11 10:53+0000\n"
+"POT-Creation-Date: 2020-03-13 14:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,30 +115,19 @@ msgstr ""
 
 #: navoica_enroll/templates/account/login.html:7
 #: navoica_enroll/templates/account/login.html:11
-#: navoica_enroll/templates/account/login.html:45
-#: navoica_enroll/templates/base.html:78
 msgid "Sign In"
 msgstr ""
 
-#: navoica_enroll/templates/account/login.html:24
-msgid "or"
-msgstr ""
-
-#: navoica_enroll/templates/account/login.html:31
+#: navoica_enroll/templates/account/login.html:29
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
 "      <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 
-#: navoica_enroll/templates/account/login.html:43
-msgid "Forgot Password?"
-msgstr ""
-
 #: navoica_enroll/templates/account/logout.html:5
 #: navoica_enroll/templates/account/logout.html:8
 #: navoica_enroll/templates/account/logout.html:18
-#: navoica_enroll/templates/base.html:67
 msgid "Sign Out"
 msgstr ""
 
@@ -219,7 +208,6 @@ msgstr ""
 
 #: navoica_enroll/templates/account/signup.html:9
 #: navoica_enroll/templates/account/signup.html:22
-#: navoica_enroll/templates/base.html:73
 msgid "Sign Up"
 msgstr ""
 
@@ -276,10 +264,6 @@ msgid ""
 "    <a href=\"%(email_url)s\">change your e-mail address</a>."
 msgstr ""
 
-#: navoica_enroll/templates/base.html:62
-msgid "My Profile"
-msgstr "Mój prodil"
-
 #: navoica_enroll/templates/users/form_registration.html:4
 #: navoica_enroll/templates/users/form_registration.html:8
 msgid "Register for a course: "
@@ -293,7 +277,13 @@ msgid ""
 "accept the participant's statement and agree to the processing of personal "
 "data in order to participate in the project. After submitting the form, you "
 "will be registered for the course. Participation in the course is free."
-msgstr "Aby wziąć udział w kursie, wypełnij poniższy formularz rejestracyjny swoimi danymi (pola obowiązkowe zostały oznaczone gwiazdką). Podane informacje powinny być kompletne i zgodne ze stanem faktycznym. Następnie zaakceptuj oświadczenie uczestnika projektu oraz wyraź zgodę na przetwarzanie danych osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
+msgstr ""
+"Aby wziąć udział w kursie, wypełnij poniższy formularz rejestracyjny swoimi "
+"danymi (pola obowiązkowe zostały oznaczone gwiazdką). Podane informacje "
+"powinny być kompletne i zgodne ze stanem faktycznym. Następnie zaakceptuj "
+"oświadczenie uczestnika projektu oraz wyraź zgodę na przetwarzanie danych "
+"osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza "
+"zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
 
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
@@ -302,6 +292,10 @@ msgstr "Użytkownicy"
 #: navoica_enroll/users/forms.py:23
 msgid "This username has already been taken."
 msgstr "Ta nazwa jest już zajęta"
+
+#: navoica_enroll/users/forms.py:41 navoica_enroll/users/models.py:26
+msgid "PESEL"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:44
 msgid "Postal code"
@@ -362,10 +356,6 @@ msgstr "Mężczyzna"
 #: navoica_enroll/users/models.py:24
 msgid "Female"
 msgstr "Kobieta"
-
-#: navoica_enroll/users/models.py:26
-msgid "Pesel"
-msgstr "PESEL"
 
 #: navoica_enroll/users/models.py:27
 msgid "For people who do not have a PESEL number, type in NONE."
@@ -511,3 +501,9 @@ msgstr "Kurs nieistnieje"
 #: navoica_enroll/users/views.py:108
 msgid "Already enrollment for this course"
 msgstr "Jesteś już zapisany/a na kurs"
+
+#~ msgid "My Profile"
+#~ msgstr "Mój prodil"
+
+#~ msgid "Pesel"
+#~ msgstr "PESEL"
