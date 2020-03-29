@@ -1,6 +1,22 @@
-Formularz Rejestacyjny Navoica
-======================================
+# Formularz Rejestacyjny Navoica
 
+## Wersja automatyczna instalacji:
+
+Ustaw zmienne środowiskowe:
+
+    export ENROLL_DOMAIN = domena.pl
+
+    export ENROLL_EMAIL = adres_do_kontaktu@domena.pl
+
+Uruchom komende:
+
+    make setup
+
+Ostatnim krokiem instalacji będzie ustawienie hasła dla użytkownika `admin`.
+Przejdź do sekcji `Konfiguracja Oauth2`
+
+
+## Wersja ręczna instalacji:
 
 Przejdź do katalogu .envs i skopiuj domyślne ustawienia:
 
@@ -12,13 +28,13 @@ Przejdź do katalogu .envs i skopiuj domyślne ustawienia:
 
 Edytuj wg potrzeby. Przykładowe wartości poniżej:
 
-    **.production/.django**
+   `.production/.django`
 
     DJANGO_SECRET_KEY=8zqaTVpMGbAJ6mKdTsdfSDASswwdSfGSZlzAdIpzTYbDXfKw53HVdRCM8n
 
     DJANGO_ADMIN_URL=admin/
 
-    DJANGO_ALLOWED_HOSTS=.enroll.navoica.pl
+    DJANGO_ALLOWED_HOSTS=enroll.navoica.pl
 
     DOMAIN=enroll.navoica.pl
 
@@ -32,14 +48,13 @@ Zmodyfikuj ustawienia serwera HTTP:
 
     mv traefik.yml.example traefik.yml
 
-    **Edytuj plik traefik.yml**
+   `Edytuj plik traefik.yml`
 
     zmień zmienne __DOMAIN__ i __EMAIL__
 
-Pamiętaj żeby __DOMAIN__ było zgodne z ustawieniami w **.django** z **DOMAIN** i **DJANGO_ALLOWED_HOSTS**
+Pamiętaj żeby __DOMAIN__ było zgodne z ustawieniami w `.django` z `DOMAIN` i `DJANGO_ALLOWED_HOSTS`
 
-Budowanie i uruchamianie Dockera
---------------------------------
+### Budowanie i uruchamianie Dockera
 
     docker-compose -f production.yml build
 
@@ -52,11 +67,13 @@ Po uruchomieniu uruchamiamy migracje danych i tworzymy własnego użytkownika ad
     docker-compose -f production.yml exec django python manage.py createsuperuser
 
 
-Przechodzimy do panelu administratora (adres może się różnić od wartości **DJANGO_ADMIN_URL**):
+## Konfiguracja Oauth2 do komunikacji z navoica.pl
+
+Przechodzimy do panelu administratora (adres może się różnić od wartości `DJANGO_ADMIN_URL`):
 
     https://enroll-test.navoica.pl/admin/
 
-Uzupełniamy iformacje o domenie zgodnie z **DOMAIN**
+Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
 
     https://enroll-test.navoica.pl/admin/sites/site/1/change/
 
