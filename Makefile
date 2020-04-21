@@ -41,3 +41,6 @@ setup:
 
 destroy:
 	docker-compose -f production.yml down -v
+
+stop:
+	docker-compose -f production.yml stop
