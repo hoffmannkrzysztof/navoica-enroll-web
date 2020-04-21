@@ -13,8 +13,8 @@ update:
 	git pull
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
-	@echo "waiting 30sec for postgresql to boot up"
-	sleep 30
+	@echo "waiting 10sec for postgresql to boot up"
+	sleep 10
 	docker-compose -f production.yml exec django python manage.py migrate
 	docker-compose -f production.yml exec django python manage.py collectstatic --noinput --clear
 
@@ -33,8 +33,8 @@ setup:
 
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
-	@echo "waiting 30sec for postgresql to boot up"
-	sleep 30
+	@echo "waiting 10sec for postgresql to boot up"
+	sleep 10
 	docker-compose -f production.yml exec django python manage.py migrate
 	docker-compose -f production.yml exec django python manage.py collectstatic  --noinput --clear
 	docker-compose -f production.yml exec django python manage.py createsuperuser --email ${ENROLL_EMAIL} --username admin

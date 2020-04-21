@@ -12,6 +12,7 @@ class EdxTests(OAuth2TestsMixin, TestCase):
         return MockedResponse(200, """{
 "username":"krzysztof",
 "bio":null,
+"id":423,
 "requires_parental_consent":true,
 "language_proficiencies":[
 

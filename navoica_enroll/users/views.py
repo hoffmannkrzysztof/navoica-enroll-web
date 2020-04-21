@@ -85,8 +85,9 @@ class UserRegistrationCourseView(FormView):
             ),
             headers=headers)
 
-        if response.status_code != 200:
-            raise Http404(_("Course does not exist"))
+        if response.status_code != requests.codes.ok:
+            messages.error(request, _("Course does not exist"))
+            raise Http404()
 
         self.course_info = response.json()
 
@@ -103,9 +104,10 @@ class UserRegistrationCourseView(FormView):
             self.course_info['course_id']
         )
 
-        course_enrollment = response.text
-        if course_enrollment != "":
-            raise Http404(_("Already enrollment for this course"))
+        course_enrollment = response.json()
+        if course_enrollment['is_active']:
+            messages.error(request, _("Already enrollment for this course"))
+            raise Http404()
 
         return super(UserRegistrationCourseView, self).dispatch(request, *args,
                                                                 **kwargs)
