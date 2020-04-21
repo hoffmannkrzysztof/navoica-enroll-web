@@ -19,8 +19,8 @@ update:
 	docker-compose -f production.yml exec django python manage.py collectstatic --noinput --clear
 
 setup:
-	rm -r .envs/.production/
-	rm compose/production/traefik/traefik.yml
+	rm -rf .envs/.production/ || true
+	rm compose/production/traefik/traefik.yml || true
 
 	cp -av .envs/.production_example/ .envs/.production/
 	sed -i "" "s/__DOMAIN__/${ENROLL_DOMAIN}/g" '.envs/.production/.django'

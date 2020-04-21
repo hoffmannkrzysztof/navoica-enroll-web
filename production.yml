@@ -15,8 +15,8 @@ services:
       - postgres
       - redis
     env_file:
-      - .envs/.production_/.django
-      - .envs/.production_/.postgres
+      - .envs/.production/.django
+      - .envs/.production/.postgres
     command: /start
 
   postgres:
@@ -28,7 +28,7 @@ services:
       - production_postgres_data:/var/lib/postgresql/data
       - production_postgres_data_backups:/backups
     env_file:
-      - .envs/.production_/.postgres
+      - .envs/.production/.postgres
 
   traefik:
     build:
