@@ -49,10 +49,12 @@
   {% endif %}
 
   {% block content %}
-    <p>Formularz rejestracyjny dla użytkowników kursów realizowanych z
-      dofinasowania ze środków EFS środki NCBR</p>
+    <div class="text-center"><br/><br/>
+      <img width="200" src="{% static 'images/logo-light-bg.svg' %}"><br/><br/>
+      <h1>{% trans "Registration form for users of courses implemented with co-financing from the ESF, NCBR funds" %}</h1>
+    </div>
   {% endblock content %}
-
+  <div class="text-right"><small>v.{{ settings.PLATFORM_VERSION }}</small></div>
 </div> <!-- /container -->
 
 {% block modal %}{% endblock modal %}

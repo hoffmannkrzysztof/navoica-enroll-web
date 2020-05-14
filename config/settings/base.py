@@ -1,6 +1,7 @@
 """
 Base settings to build other settings files upon.
 """
+import subprocess
 
 import environ
 
@@ -314,3 +315,9 @@ COURSE_KEY_REGEX = COURSE_KEY_PATTERN.replace('P<course_key_string>', ':')
 
 STATEMENT1_PDF = env.str("STATEMENT1_PDF")
 STATEMENT2_PDF = env.str("STATEMENT2_PDF")
+
+try:
+    PLATFORM_VERSION = subprocess.check_output(
+        ["git -C %s describe --tags" % ROOT_DIR], shell=True).decode('UTF-8')
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"

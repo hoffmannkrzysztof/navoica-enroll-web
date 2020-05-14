@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 08:43+0000\n"
+"POT-Creation-Date: 2020-05-14 10:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,6 +265,12 @@ msgid ""
 "    <a href=\"%(email_url)s\">change your e-mail address</a>."
 msgstr ""
 
+#: navoica_enroll/templates/base.html:54
+msgid ""
+"Registration form for users of courses implemented with co-financing from "
+"the ESF, NCBR funds"
+msgstr "Formularz rejestracyjny dla użytkowników kursów realizowanych z dofinasowania ze środków EFS środki NCBR"
+
 #: navoica_enroll/templates/users/form_registration.html:4
 #: navoica_enroll/templates/users/form_registration.html:8
 msgid "Register for a course: "
@@ -290,29 +296,29 @@ msgstr ""
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: navoica_enroll/users/forms.py:23
+#: navoica_enroll/users/forms.py:24
 msgid "This username has already been taken."
 msgstr "Ta nazwa jest już zajęta"
 
-#: navoica_enroll/users/forms.py:41 navoica_enroll/users/models.py:26
+#: navoica_enroll/users/forms.py:42 navoica_enroll/users/models.py:26
 msgid "PESEL"
 msgstr ""
 
-#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:45
+#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:45
 msgid "Postal code"
 msgstr "Kod pocztowy"
 
-#: navoica_enroll/users/forms.py:44
+#: navoica_enroll/users/forms.py:45
 msgid "E-mail address"
 msgstr "Adres poczty elektronicznej"
 
-#: navoica_enroll/users/forms.py:47
+#: navoica_enroll/users/forms.py:54
 #, python-brace-format
 msgid ""
 "I agree with the project participant's declaration. <a href='{url}'>PDF</a>"
 msgstr "Akceptuję oświadczenie uczestnika projektu. <a href='{url}'>PDF</a>"
 
-#: navoica_enroll/users/forms.py:51
+#: navoica_enroll/users/forms.py:59
 #, python-brace-format
 msgid ""
 "I consent to the processing of my personal data to participate in the "
@@ -321,19 +327,19 @@ msgstr ""
 "Wyrażam zgodę na przetwarzanie danych osobowych w celu uczestnictwa w "
 "projekcie. <a href='{url}'>PDF</a>"
 
-#: navoica_enroll/users/forms.py:63
+#: navoica_enroll/users/forms.py:69
 msgid "Participant details"
 msgstr "Dane uczestnika"
 
-#: navoica_enroll/users/forms.py:90
+#: navoica_enroll/users/forms.py:96
 msgid "Contact details"
 msgstr "Dane do kontaktu"
 
-#: navoica_enroll/users/forms.py:139
+#: navoica_enroll/users/forms.py:145
 msgid "Details and type of support"
 msgstr "Szczegóły i rodzaj wsparcia"
 
-#: navoica_enroll/users/forms.py:197
+#: navoica_enroll/users/forms.py:203
 msgid "Send the form and register me for the course"
 msgstr "Zapisz i zarejestruj mnie na kurs"
 
@@ -578,15 +584,15 @@ msgstr "Rejestracje na kurs"
 msgid "Registrations for course"
 msgstr "Rejestracje na kurs "
 
-#: navoica_enroll/users/views.py:42
+#: navoica_enroll/users/views.py:43
 msgid "Infos successfully updated"
 msgstr "Informacja zaaktualizowana"
 
-#: navoica_enroll/users/views.py:97
+#: navoica_enroll/users/views.py:98
 msgid "Course does not exist"
 msgstr "Kurs nie istnieje"
 
-#: navoica_enroll/users/views.py:117
+#: navoica_enroll/users/views.py:118
 msgid "Already enrollment for this course"
 msgstr "Jesteś już zapisany/a na kurs"
 
