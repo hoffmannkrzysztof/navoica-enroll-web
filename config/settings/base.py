@@ -10,7 +10,9 @@ ROOT_DIR = (
 APPS_DIR = ROOT_DIR.path("navoica_enroll")
 
 env = environ.Env(
-    NAVOICA_URL=(str, "https://navoica.pl")
+    NAVOICA_URL=(str, "https://navoica.pl"),
+    STATEMENT1_PDF=(str, 'pdfs/Wzór oświadczenia uczestnika Projektu.pdf'),
+    STATEMENT2_PDF=(str, 'pdfs/Przetwarzanie danych.pdf')
 )
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -165,7 +167,8 @@ STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = [str(APPS_DIR.path("static"))]
+STATICFILES_DIRS = [str(APPS_DIR.path("static")),
+                    str(ROOT_DIR("external_static"))]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -308,3 +311,6 @@ REST_FRAMEWORK = {
 COURSE_KEY_PATTERN = r'(?P<course_key_string>[^/+]+(/|\+)[^/+]+(/|\+)[^/?]+)'
 COURSE_ID_PATTERN = COURSE_KEY_PATTERN.replace('course_key_string', 'course_id')
 COURSE_KEY_REGEX = COURSE_KEY_PATTERN.replace('P<course_key_string>', ':')
+
+STATEMENT1_PDF = env.str("STATEMENT1_PDF")
+STATEMENT2_PDF = env.str("STATEMENT2_PDF")
