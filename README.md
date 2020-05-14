@@ -82,3 +82,22 @@ Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
 Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
 
     https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
+
+
+## Podmiana plików PDF ze zgodami w formularzu
+
+Dodaj odpowiedni pliki do katalogu: `./external_static`
+
+Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
+    
+"Wzór oświadczenia...":
+
+    STATEMENT1_PDF=nazwa_pliku.pdf
+    
+"Przetwarzanie informacji":
+
+    STATEMENT2_PDF=nazwa_pliku2.pdf
+    
+Zrestartuj aplikacje
+
+    make stop && make start

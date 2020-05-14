@@ -151,6 +151,7 @@ class UserRegistrationCourseView(FormView):
         obj = form.save(commit=False)
         obj.user = self.request.user
         obj.course_id = self.course_info['course_id']
+        obj.language_code = self.request.LANGUAGE_CODE
         obj.save()
 
         return super().form_valid(form)
