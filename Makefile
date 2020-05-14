@@ -44,3 +44,10 @@ destroy:
 
 stop:
 	docker-compose -f production.yml stop
+
+start:
+	docker-compose -f production.yml up -d
+	@echo "waiting 10sec for postgresql to boot up"
+	sleep 10
+	docker-compose -f production.yml exec django python manage.py migrate
+	docker-compose -f production.yml exec django python manage.py collectstatic --noinput --clear
