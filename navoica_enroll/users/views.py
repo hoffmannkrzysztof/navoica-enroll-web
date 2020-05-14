@@ -1,4 +1,5 @@
 import requests
+from allauth.account.views import logout
 from allauth.socialaccount.models import SocialToken
 from django.conf import settings
 from django.contrib import messages
@@ -76,7 +77,10 @@ class UserRegistrationCourseView(FormView):
             account__user=self.request.user,
             account__provider='edx')
 
-        self.token = social_token[0].token
+        try:
+            self.token = social_token[0].token
+        except IndexError:
+            return logout(request)
 
         headers = {
             "Authorization": "Bearer " + self.token
