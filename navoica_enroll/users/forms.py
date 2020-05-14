@@ -208,7 +208,7 @@ class UserRegistrationCourseFormBase(ModelForm):
 
     class Meta:
         model = UserRegistrationCourse
-        exclude = ('user', 'course_id')
+        exclude = ('user', 'course_id', 'language_code')
 
 
 class UserRegistrationCourseForm(UserRegistrationCourseFormBase):
