@@ -4,3 +4,6 @@ USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
 NAVOICA_URL=https://draft.navoica.pl
 DOMAIN=enroll.navoica.pl
+
+#STATEMENT1_PDF=
+#STATEMENT2_PDF=

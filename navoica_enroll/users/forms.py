@@ -1,6 +1,7 @@
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import ButtonHolder, Div, Fieldset, HTML, Layout, \
     Submit
+from django.conf import settings
 from django.contrib.auth import forms, get_user_model
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.exceptions import ValidationError
@@ -37,21 +38,28 @@ class UserCreationForm(forms.UserCreationForm):
         raise ValidationError(self.error_messages["duplicate_username"])
 
 
-class UserRegistrationCourseForm(ModelForm):
+class UserRegistrationCourseFormBase(ModelForm):
     pesel = PLPESELField(max_length=11, label=_("PESEL"),
                          widget=TextInput(attrs={'type': 'number'}))
     postal_code = PLPostalCodeField(label=_("Postal code"))
     email = EmailField(label=_("E-mail address"))
 
-    statement1 = BooleanField(required=True, label=_(
-        "I accept the statement of the Project participant. <a href='{}'>PDF</a>").format(
-        static("pdfs/Wzór oświadczenia uczestnika Projektu.pdf")))
-    statement2 = BooleanField(required=True, label=_(
-        "I agree to the processing of personal data for the purposes of participation in the project. <a href='{}'>PDF</a>").format(
-        static("pdfs/Przetwarzanie danych.pdf")))
+    statement1 = BooleanField(required=True)
+    statement2 = BooleanField(required=True)
 
     def __init__(self, *args, **kwargs):
-        super(UserRegistrationCourseForm, self).__init__(*args, **kwargs)
+        super(UserRegistrationCourseFormBase, self).__init__(*args, **kwargs)
+
+        self.fields['statement1'].label = _(
+            "I agree with the project participant's declaration. <a href='{url}'>PDF</a>").format(
+            url=
+            static(settings.STATEMENT1_PDF))
+
+        self.fields['statement2'].label = _(
+            "I consent to the processing of my personal data to participate in the project. <a href='{url}'>PDF</a>").format(
+            url=
+            static(settings.STATEMENT2_PDF))
+
         self.helper = FormHelper(self)
 
         self.helper.layout = Layout(
@@ -201,3 +209,17 @@ class UserRegistrationCourseForm(ModelForm):
     class Meta:
         model = UserRegistrationCourse
         exclude = ('user', 'course_id')
+
+
+class UserRegistrationCourseForm(UserRegistrationCourseFormBase):
+    pass
+
+
+class UserRegistrationCourseEnglishForm(UserRegistrationCourseFormBase
+                                        ):
+    def __init__(self, *args, **kwargs):
+        super(UserRegistrationCourseEnglishForm, self).__init__(*args, **kwargs)
+        self.fields['pesel'].required = False
+        self.fields['voivodeship'].required = False
+        self.fields['county'].required = False
+        self.fields['commune'].required = False

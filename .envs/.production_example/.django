@@ -8,6 +8,9 @@ DJANGO_ALLOWED_HOSTS=__DOMAIN__
 DOMAIN=__DOMAIN__
 NAVOICA_URL=https://navoica.pl
 
+#STATEMENT1_PDF=
+#STATEMENT2_PDF=
+
 # Security
 # ------------------------------------------------------------------------------
 # TIP: better off using DNS, however, redirect is OK too

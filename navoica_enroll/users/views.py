@@ -1,4 +1,5 @@
 import requests
+from allauth.account.views import logout
 from allauth.socialaccount.models import SocialToken
 from django.conf import settings
 from django.contrib import messages
@@ -12,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, RedirectView, UpdateView
 from django.views.generic.edit import FormView
 
-from .forms import UserRegistrationCourseForm
+from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
 
 User = get_user_model()
 
@@ -61,17 +62,25 @@ user_redirect_view = UserRedirectView.as_view()
 @method_decorator(login_required, name='dispatch')
 class UserRegistrationCourseView(FormView):
     template_name = 'users/form_registration.html'
-    form_class = UserRegistrationCourseForm
     success_url = '/thanks/'
     token = None
     course_info = None
+
+    def get_form_class(self):
+
+        if self.request.LANGUAGE_CODE == 'pl':
+            return UserRegistrationCourseForm
+        return UserRegistrationCourseEnglishForm
 
     def dispatch(self, request, *args, **kwargs):
         social_token = SocialToken.objects.filter(
             account__user=self.request.user,
             account__provider='edx')
 
-        self.token = social_token[0].token
+        try:
+            self.token = social_token[0].token
+        except IndexError:
+            return logout(request)
 
         headers = {
             "Authorization": "Bearer " + self.token
