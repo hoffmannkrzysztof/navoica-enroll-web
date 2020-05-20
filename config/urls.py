@@ -6,7 +6,8 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
-from navoica_enroll.users.views import UserRegistrationCourseView
+from navoica_enroll.users.views import UserRegistrationCourseView, \
+    UserRegistrationTestView
 
 urlpatterns = [
                   path("",
@@ -57,6 +58,9 @@ if settings.DEBUG:
             kwargs={"exception": Exception("Page not Found")},
         ),
         path("500/", default_views.server_error),
+
+        path("registration_form_test/",
+             view=UserRegistrationTestView.as_view(), name="test_form"),
     ]
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
