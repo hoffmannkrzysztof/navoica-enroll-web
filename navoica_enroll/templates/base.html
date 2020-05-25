@@ -54,7 +54,9 @@
       <h1>{% trans "Registration form for users of courses implemented with co-financing from the ESF, NCBR funds" %}</h1>
     </div>
   {% endblock content %}
-  <div class="text-right"><small>v.{{ settings.PLATFORM_VERSION }}</small></div>
+  <footer>
+    <p class="footer-copyright text-muted text-center"><small>&copy; Copyright 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> Navoica.pl | ver.{{ settings.PLATFORM_VERSION }}</small> </p>
+  </footer>
 </div> <!-- /container -->
 
 {% block modal %}{% endblock modal %}

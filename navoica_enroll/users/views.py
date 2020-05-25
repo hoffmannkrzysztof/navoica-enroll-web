@@ -115,7 +115,7 @@ class UserRegistrationCourseView(FormView):
 
         course_enrollment = response.json()
         if course_enrollment['is_active']:
-            messages.error(request, _("Already enrollment for this course"))
+            messages.error(request, _("You are already enrolled in this course"))
             raise Http404()
 
         return super(UserRegistrationCourseView, self).dispatch(request, *args,

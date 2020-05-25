@@ -1,5 +1,6 @@
 from allauth.socialaccount.providers.base import ProviderAccount
 from allauth.socialaccount.providers.oauth2.provider import OAuth2Provider
+from django.utils.translation import ugettext_lazy as _
 
 
 class EdxAccount(ProviderAccount):
@@ -10,7 +11,7 @@ class EdxAccount(ProviderAccount):
 
 class EdxProvider(OAuth2Provider):
     id = 'edx'
-    name = 'Navoica.pl'
+    name = _("Log in to Navoica.pl")
     account_class = EdxAccount
 
     def get_default_scope(self):

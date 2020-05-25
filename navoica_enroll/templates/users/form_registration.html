@@ -5,9 +5,15 @@
   {{ course_info.name }}{% endblock %}
 
 {% block content %}
-  <h1>{% trans "Register for a course: " %}<small>{{ course_info.name }}</small>
-  </h1>
+<div id="student-form">
+  <h2>{% trans "Register for a course: " %}<small class="font-italic">{{ course_info.name }}</small>
+  </h2>
+
+  <hr>
 
   <p>{% trans "To participate in the course, fill in the registration form below with your details (mandatory fields have been marked with an asterisk). The information provided should be complete and consistent with the facts. Then accept the participant's statement and agree to the processing of personal data in order to participate in the project. After submitting the form, you will be registered for the course. Participation in the course is free." %}</p>
+
+
   {% crispy form %}
+</div>
 {% endblock %}
