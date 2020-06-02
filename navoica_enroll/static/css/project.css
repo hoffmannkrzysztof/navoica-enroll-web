@@ -1,5 +1,7 @@
 /* These styles are generated from project.scss. */
 
+
+
 .alert-debug {
   color: black;
   background-color: white;
@@ -11,3 +13,126 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+ .form-control {
+   border-radius: 0;
+}
+ .custom-checkbox .custom-control-label::before {
+   border-radius: 0;
+}
+ hr {
+   border-top: 1px solid #dee2e6;
+}
+ #student-form .h4 {
+   color: darkcyan;
+   font-weight: 700;
+   letter-spacing: 0.02em;
+   line-height: 1;
+   text-transform: uppercase;
+   word-spacing: 0.04em;
+   font-size: inherit;
+}
+ #student-form a {
+   color: #e41d37;
+}
+ #student-form a:hover {
+   color: #e41d37;
+}
+ #student-form .asteriskField {
+   color: #e41d37;
+}
+ #student-form .btn-primary {
+   background-color: #e41d37;
+   border-color: #e41d37;
+}
+ #student-form .btn-primary:hover {
+   background-color: #c3172e;
+   border-color: #b8162b;
+}
+ #student-form .btn-primary:not(:disabled):not(.disabled):active {
+   background-color: #b8162b;
+   border-color: #ad1528;
+}
+ #student-form .btn-primary:focus {
+   background-color: #c3172e;
+   border-color: #b8162b;
+   box-shadow: 0 0 0 0.2rem rgba(184, 22, 43, .5);
+}
+ #student-form label {
+   font-weight: 600;
+   word-wrap: anywhere;
+}
+ #student-form .form-text {
+   font-style: italic;
+   font-size: 0.875rem;
+}
+ #student-form form {
+   background-color: #f8f9fa;
+   border: 1px solid #e9ecef;
+   padding: 0 1rem 1rem 1rem;
+}
+ #student-form .mt-5 {
+   margin-top: 2rem !important;
+}
+ #student-form .group {
+   background-color: rgba(200, 200, 200, .05);
+   box-shadow: 0 0 4px inset #ced4da;
+
+}
+ #student-form #div_id_work_name {
+   margin-bottom: -0.5rem;
+}
+ @media (max-width: 1024px) {
+   #student-form #div_id_work_name {
+     margin-bottom: -1.7rem;
+  }
+}
+ @media (max-width: 480px) {
+   #student-form #div_id_work_name {
+     margin-bottom: -;
+  }
+}
+ #student-form .select:focus {
+   outline: 0;
+   box-shadow: 0 0 0 0.2rem #dee2e6;
+   border-color: #e41d37;
+}
+ .container {
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+}
+.socialaccount_providers {
+  padding: 0;
+}
+.socialaccount_providers a {
+  color: #fff;
+  background-color: #E41D37;
+  border: 1px solid #E41D37;
+  padding: 0.5rem 1rem;
+  line-height: 1.6;
+}
+.socialaccount_providers a:hover {
+  text-decoration: none;
+  background-color: #c3172e;
+  border-color: #b8162b;
+}
+.socialaccount_providers li {
+  list-style: none;
+}
+@media (max-width: 480px) {
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video iframe, .video object, .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
