@@ -21,3 +21,4 @@ djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
 coreapi==2.3.3  # https://github.com/core-api/python-client
 
 django-localflavor==2.2
+django-csv-exports==1.0.5

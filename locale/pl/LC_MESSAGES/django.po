@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 10:23+0000\n"
+"POT-Creation-Date: 2020-06-02 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: navoica_enroll/providers/edx/provider.py:14
+msgid "Log in to Navoica.pl"
+msgstr ""
 
 #: navoica_enroll/templates/account/account_inactive.html:5
 #: navoica_enroll/templates/account/account_inactive.html:8
@@ -115,11 +119,25 @@ msgid ""
 msgstr ""
 
 #: navoica_enroll/templates/account/login.html:7
-#: navoica_enroll/templates/account/login.html:11
 msgid "Sign In"
 msgstr ""
 
-#: navoica_enroll/templates/account/login.html:29
+#: navoica_enroll/templates/account/login.html:17
+msgid ""
+"The course you wish to enroll in has been funded by the European Union and "
+"the Polish government. The university which created the course is therefore "
+"obliged to register its participants."
+msgstr ""
+
+#: navoica_enroll/templates/account/login.html:19
+msgid ""
+"You will be redirected to the registration form in a moment, but in order to "
+"fill it in, you must have an account on Navoica.pl.All personal data "
+"included in the registration form will be gathered and processed by the "
+"course organiser - the university."
+msgstr ""
+
+#: navoica_enroll/templates/account/login.html:40
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -269,14 +287,16 @@ msgstr ""
 msgid ""
 "Registration form for users of courses implemented with co-financing from "
 "the ESF, NCBR funds"
-msgstr "Formularz rejestracyjny dla użytkowników kursów realizowanych z dofinasowania ze środków EFS środki NCBR"
+msgstr ""
+"Formularz rejestracyjny dla użytkowników kursów realizowanych z "
+"dofinasowania ze środków EFS środki NCBR"
 
 #: navoica_enroll/templates/users/form_registration.html:4
-#: navoica_enroll/templates/users/form_registration.html:8
+#: navoica_enroll/templates/users/form_registration.html:9
 msgid "Register for a course: "
 msgstr "Zarejestruj się na kurs: "
 
-#: navoica_enroll/templates/users/form_registration.html:11
+#: navoica_enroll/templates/users/form_registration.html:14
 msgid ""
 "To participate in the course, fill in the registration form below with your "
 "details (mandatory fields have been marked with an asterisk). The "
@@ -331,15 +351,15 @@ msgstr ""
 msgid "Participant details"
 msgstr "Dane uczestnika"
 
-#: navoica_enroll/users/forms.py:96
+#: navoica_enroll/users/forms.py:105
 msgid "Contact details"
 msgstr "Dane do kontaktu"
 
-#: navoica_enroll/users/forms.py:145
+#: navoica_enroll/users/forms.py:157
 msgid "Details and type of support"
 msgstr "Szczegóły i rodzaj wsparcia"
 
-#: navoica_enroll/users/forms.py:203
+#: navoica_enroll/users/forms.py:216
 msgid "Send the form and register me for the course"
 msgstr "Zapisz i zarejestruj mnie na kurs"
 
@@ -593,7 +613,9 @@ msgid "Course does not exist"
 msgstr "Kurs nie istnieje"
 
 #: navoica_enroll/users/views.py:118
-msgid "Already enrollment for this course"
+#, fuzzy
+#| msgid "Already enrollment for this course"
+msgid "You are already enrolled in this course"
 msgstr "Jesteś już zapisany/a na kurs"
 
 #~ msgid "Work name"

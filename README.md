@@ -101,3 +101,11 @@ Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
 Zrestartuj aplikacje
 
     make stop && make start
+
+## Export danych do pliku CSV
+
+Proszę zalogować się do panelu administatora i przejść do sekcji:
+
+    Użytkownicy -> Rejestracje na kurs 
+    
+Następnie wybrać rekordy i wybrać z listy Akcję: "Export selected objects as csv file"
