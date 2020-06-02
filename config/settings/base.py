@@ -86,7 +86,8 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     'navoica_enroll.providers.edx',
     "rest_framework",
-    'localflavor'
+    'localflavor',
+    'django_csv_exports',
 ]
 
 NAVOICA_URL = env.str("NAVOICA_URL")

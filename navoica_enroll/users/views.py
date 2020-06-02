@@ -115,7 +115,7 @@ class UserRegistrationCourseView(FormView):
 
         course_enrollment = response.json()
         if course_enrollment['is_active']:
-            messages.error(request, _("Already enrollment for this course"))
+            messages.error(request, _("You are already enrolled in this course"))
             raise Http404()
 
         return super(UserRegistrationCourseView, self).dispatch(request, *args,
@@ -151,6 +151,39 @@ class UserRegistrationCourseView(FormView):
         obj = form.save(commit=False)
         obj.user = self.request.user
         obj.course_id = self.course_info['course_id']
+        obj.language_code = self.request.LANGUAGE_CODE
+        obj.save()
+
+        return super().form_valid(form)
+
+
+class UserRegistrationTestView(FormView):
+    template_name = 'users/form_registration.html'
+    success_url = '/thanks/'
+    token = None
+    course_info = None
+
+    def get_form_class(self):
+        if self.request.LANGUAGE_CODE == 'pl':
+            return UserRegistrationCourseForm
+        return UserRegistrationCourseEnglishForm
+
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['email'] = 'test@email.com'
+        initial['first_name'] = "Test First"
+        initial['last_name'] = "Test Last"
+        return initial
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['course_info'] = "Some Test Course Info"
+        return context
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.user_id = 1
+        obj.course_id = "TestID"
         obj.language_code = self.request.LANGUAGE_CODE
         obj.save()
 
