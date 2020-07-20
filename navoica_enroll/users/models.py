@@ -53,7 +53,7 @@ class UserRegistrationCourse(models.Model):
                                              key=lambda x: x[1]))
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)
-    phone = models.CharField(_("Phone"), max_length=15, help_text=_(
+    phone = models.CharField(_("Phone"), max_length=30, help_text=_(
         "Provide the contact telephone number."))
     email = models.CharField(_("E-mail"), max_length=254,
                              help_text=_("Enter the address mail for contact."))
