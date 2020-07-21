@@ -55,7 +55,7 @@ class UserRegistrationCourse(models.Model):
                                blank=True)
     phone = models.CharField(_("Phone"), max_length=30, help_text=_(
         "Provide the contact telephone number."))
-    email = models.CharField(_("E-mail"), max_length=30,
+    email = models.CharField(_("E-mail"), max_length=254,
                              help_text=_("Enter the address mail for contact."))
     start_project_date = models.DateField(_("Start project date"),
                                           default=timezone.now)
