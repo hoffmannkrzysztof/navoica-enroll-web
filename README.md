@@ -1,6 +1,6 @@
 # Formularz Rejestacyjny Navoica
 
-Do działania systemu wymagane są otwarte port 80 i 433. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
+Do działania systemu wymagane są otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
 
 ## Wersja automatyczna instalacji:
 
