@@ -23,13 +23,13 @@ setup:
 	rm compose/production/traefik/traefik.yml || true
 
 	cp -av .envs/.production_example/ .envs/.production/
-	sed -i "" "s/__DOMAIN__/${ENROLL_DOMAIN}/g" '.envs/.production/.django'
-	sed -i "" "s/__DJANGO_SECRET_KEY__/${RANDOM_STRING}/g" '.envs/.production/.django'
+	sed -i "s/__DOMAIN__/${ENROLL_DOMAIN}/g" '.envs/.production/.django'
+	sed -i "s/__DJANGO_SECRET_KEY__/${RANDOM_STRING}/g" '.envs/.production/.django'
 
 
 	cp compose/production/traefik/traefik.yml.example compose/production/traefik/traefik.yml
-	sed -i "" "s/__DOMAIN__/${ENROLL_DOMAIN}/g" 'compose/production/traefik/traefik.yml'
-	sed -i "" "s/__EMAIL__/${ENROLL_EMAIL}/g" 'compose/production/traefik/traefik.yml'
+	sed -i "s/__DOMAIN__/${ENROLL_DOMAIN}/g" 'compose/production/traefik/traefik.yml'
+	sed -i "s/__EMAIL__/${ENROLL_EMAIL}/g" 'compose/production/traefik/traefik.yml'
 
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
