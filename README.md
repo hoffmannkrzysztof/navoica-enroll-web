@@ -18,6 +18,52 @@ Ostatnim krokiem instalacji będzie ustawienie hasła dla użytkownika `admin`.
 Przejdź do sekcji `Konfiguracja Oauth2`
 
 
+## Konfiguracja Oauth2 do komunikacji z navoica.pl
+
+Przechodzimy do panelu administratora (adres może się różnić od wartości `DJANGO_ADMIN_URL`):
+
+    https://enroll-test.navoica.pl/admin/
+
+Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
+
+    https://enroll-test.navoica.pl/admin/sites/site/1/change/
+
+Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
+
+    https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
+
+
+## Podmiana plików PDF ze zgodami w formularzu
+
+Dodaj odpowiedni pliki do katalogu: `./external_static`
+
+Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
+    
+"Wzór oświadczenia...":
+
+    STATEMENT1_PDF=nazwa_pliku.pdf
+    
+"Przetwarzanie informacji":
+
+    STATEMENT2_PDF=nazwa_pliku2.pdf
+    
+Zrestartuj aplikacje
+
+    make stop && make start
+
+## Export danych do pliku CSV
+
+Proszę zalogować się do panelu administatora i przejść do sekcji:
+
+    Użytkownicy -> Rejestracje na kurs 
+    
+Następnie wybrać rekordy i wybrać z listy Akcję: "Export selected objects as csv file"
+
+
+---------------
+---------------
+
+
 ## Wersja ręczna instalacji:
 
 Przejdź do katalogu .envs i skopiuj domyślne ustawienia:
@@ -68,44 +114,3 @@ Po uruchomieniu uruchamiamy migracje danych i tworzymy własnego użytkownika ad
 
     docker-compose -f production.yml exec django python manage.py createsuperuser
 
-
-## Konfiguracja Oauth2 do komunikacji z navoica.pl
-
-Przechodzimy do panelu administratora (adres może się różnić od wartości `DJANGO_ADMIN_URL`):
-
-    https://enroll-test.navoica.pl/admin/
-
-Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
-
-    https://enroll-test.navoica.pl/admin/sites/site/1/change/
-
-Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
-
-    https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
-
-
-## Podmiana plików PDF ze zgodami w formularzu
-
-Dodaj odpowiedni pliki do katalogu: `./external_static`
-
-Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
-    
-"Wzór oświadczenia...":
-
-    STATEMENT1_PDF=nazwa_pliku.pdf
-    
-"Przetwarzanie informacji":
-
-    STATEMENT2_PDF=nazwa_pliku2.pdf
-    
-Zrestartuj aplikacje
-
-    make stop && make start
-
-## Export danych do pliku CSV
-
-Proszę zalogować się do panelu administatora i przejść do sekcji:
-
-    Użytkownicy -> Rejestracje na kurs 
-    
-Następnie wybrać rekordy i wybrać z listy Akcję: "Export selected objects as csv file"
