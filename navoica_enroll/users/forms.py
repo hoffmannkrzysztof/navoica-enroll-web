@@ -5,7 +5,7 @@ from django.conf import settings
 from django.contrib.auth import forms, get_user_model
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.exceptions import ValidationError
-from django.forms import BooleanField, EmailField, ModelForm, TextInput
+from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.forms import PLPESELField, PLPostalCodeField
 
@@ -43,6 +43,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                          widget=TextInput(attrs={'type': 'number'}))
     postal_code = PLPostalCodeField(label=_("Postal code"))
     email = EmailField(label=_("E-mail address"))
+    country = CharField(required=True)
 
     statement1 = BooleanField(required=True)
     statement2 = BooleanField(required=True)
@@ -67,7 +68,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                 '',
                 HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
                     _("Participant details"))),
-                Div(    
+                Div(
                     Div(
                         Div('first_name',
                             css_class="col-md-6 mb-3"
@@ -92,12 +93,12 @@ class UserRegistrationCourseFormBase(ModelForm):
                         ),
                         css_class="row"
                     ),
-                    Div (
+                    Div(
                         Div('education',
                             css_class="col-md mb-3"
-                        ), 
+                            ),
                         css_class="row"
-                     ),     
+                    ),
                     css_class="group p-3 mb-4"
                 ),
 
@@ -106,7 +107,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                 Div(
                     Div(
                         Div('street',
-                            css_class="col-md-6 mb-2"
+                            css_class="col-md-4 mb-4"
                             ),
                         Div('street_no',
                             css_class="col-md-2 mb-2"
@@ -119,13 +120,13 @@ class UserRegistrationCourseFormBase(ModelForm):
                             'postal_code',
                             css_class="col-md-2 mb-2"
                         ),
+                        Div('city',
+                            css_class="col-md-2 mb-2"
+                            ),
                         css_class="row"
                     ),
 
                     Div(
-                        Div('city',
-                            css_class="col-md-3 mb-3"
-                            ),
                         Div(
                             'voivodeship',
                             css_class="col-md-3 mb-3"
@@ -136,6 +137,10 @@ class UserRegistrationCourseFormBase(ModelForm):
                         ),
                         Div(
                             'commune',
+                            css_class="col-md-3 mb-3"
+                        ),
+                        Div(
+                            'country',
                             css_class="col-md-3 mb-3"
                         ),
                         css_class="row"
@@ -152,10 +157,10 @@ class UserRegistrationCourseFormBase(ModelForm):
                         css_class="row"
                     ),
                     css_class="group p-3 mb-4"
-                ),    
+                ),
                 HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
                     _("Details and type of support"))),
-               Div(     
+                Div(
                     Div(
                         Div('start_project_date',
                             css_class="col-md-4 mb-4"
@@ -205,10 +210,10 @@ class UserRegistrationCourseFormBase(ModelForm):
                         css_class="row align-items-end"
                     ),
                     css_class="group p-3 mb-4"
-                 ),   
-
                 ),
-       
+
+            ),
+
             'statement1', 'statement2',
 
             ButtonHolder(
