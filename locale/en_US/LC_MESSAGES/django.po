@@ -3,9 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,34 +10,33 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-30 09:07+0200\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
-"Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
-"Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
+"Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: navoica_enroll/providers/edx/provider.py:14
 msgid "Log in to Navoica.pl"
-msgstr "Zaloguj się na Navoica.pl"
+msgstr ""
 
 #: navoica_enroll/templates/account/account_inactive.html:5
 #: navoica_enroll/templates/account/account_inactive.html:8
 msgid "Account Inactive"
-msgstr "Konto nieaktywne"
+msgstr ""
 
 #: navoica_enroll/templates/account/account_inactive.html:10
 msgid "This account is inactive."
-msgstr "To konto jest nieaktywne"
+msgstr ""
 
 #: navoica_enroll/templates/account/email.html:6
 msgid "Account"
-msgstr "Konto"
+msgstr ""
 
 #: navoica_enroll/templates/account/email.html:9
 msgid "E-mail Addresses"
-msgstr "Adresy email"
+msgstr ""
 
 #: navoica_enroll/templates/account/email.html:12
 msgid "The following e-mail addresses are associated with your account:"
@@ -130,9 +126,6 @@ msgid ""
 "the Polish government. The university which created the course is therefore "
 "obliged to register its participants."
 msgstr ""
-"Kurs, na który chcesz się zarejestrować został sfinansowany ze środków Unii "
-"Europejskiej i środków budżetu państwa. Warunki dofinansowania obligują "
-"uczelnię - organizatora kursu - do ewidencjonowania jego uczestników."
 
 #: navoica_enroll/templates/account/login.html:19
 msgid ""
@@ -141,11 +134,6 @@ msgid ""
 "included in the registration form will be gathered and processed by the "
 "course organiser - the university."
 msgstr ""
-"Za chwilę zostaniesz przekierowany do formularza rejestracyjnego. Aby "
-"możliwe było jego wypełnienie, należy posiadać aktywne konto na platformie "
-"Navoica.Dane osobowe, które zostaną przesłane za pośrednictwem formularza "
-"rejestracyjnego, będą gromadzone i przetwarzanie przez uczelnię - "
-"organizatora kursu."
 
 #: navoica_enroll/templates/account/login.html:40
 #, python-format
@@ -297,13 +285,11 @@ msgid ""
 "Registration form for users of courses implemented with co-financing from "
 "the ESF, NCBR funds"
 msgstr ""
-"Formularz rejestracyjny dla użytkowników kursów realizowanych z "
-"dofinasowania ze środków EFS środki NCBR"
 
 #: navoica_enroll/templates/users/form_registration.html:4
 #: navoica_enroll/templates/users/form_registration.html:9
 msgid "Register for a course: "
-msgstr "Zarejestruj się na kurs: "
+msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:14
 msgid ""
@@ -314,20 +300,14 @@ msgid ""
 "data in order to participate in the project. After submitting the form, you "
 "will be registered for the course. Participation in the course is free."
 msgstr ""
-"Aby wziąć udział w kursie, wypełnij poniższy formularz rejestracyjny swoimi "
-"danymi (pola obowiązkowe zostały oznaczone gwiazdką). Podane informacje "
-"powinny być kompletne i zgodne ze stanem faktycznym. Następnie zaakceptuj "
-"oświadczenie uczestnika projektu oraz wyraź zgodę na przetwarzanie danych "
-"osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza "
-"zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
 
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
-msgstr "Użytkownicy"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:24
 msgid "This username has already been taken."
-msgstr "Ta nazwa jest już zajęta"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:42 navoica_enroll/users/models.py:26
 msgid "PESEL"
@@ -335,17 +315,17 @@ msgstr ""
 
 #: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:45
 msgid "Postal code"
-msgstr "Kod pocztowy"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:45
 msgid "E-mail address"
-msgstr "Adres poczty elektronicznej"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:55
 #, python-brace-format
 msgid ""
 "I agree with the project participant's declaration. <a href='{url}'>PDF</a>"
-msgstr "Akceptuję oświadczenie uczestnika projektu. <a href='{url}'>PDF</a>"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:60
 #, python-brace-format
@@ -353,278 +333,274 @@ msgid ""
 "I consent to the processing of my personal data to participate in the "
 "project. <a href='{url}'>PDF</a>"
 msgstr ""
-"Wyrażam zgodę na przetwarzanie danych osobowych w celu uczestnictwa w "
-"projekcie. <a href='{url}'>PDF</a>"
 
 #: navoica_enroll/users/forms.py:70
 msgid "Participant details"
-msgstr "Dane uczestnika"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:106
 msgid "Contact details"
-msgstr "Dane do kontaktu"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:162
 msgid "Details and type of support"
-msgstr "Szczegóły i rodzaj wsparcia"
+msgstr ""
 
 #: navoica_enroll/users/forms.py:221
 msgid "Send the form and register me for the course"
-msgstr "Zapisz i zarejestruj mnie na kurs"
+msgstr ""
 
 #: navoica_enroll/users/models.py:13
 msgid "Name of User"
-msgstr "Nazwa użytkownika"
+msgstr ""
 
 #: navoica_enroll/users/models.py:20
 msgid "First Name"
-msgstr "Imię"
+msgstr ""
 
 #: navoica_enroll/users/models.py:21
 msgid "Last name"
-msgstr "Nazwisko"
+msgstr ""
 
 #: navoica_enroll/users/models.py:22
 msgid "Gender"
-msgstr "Płeć"
+msgstr ""
 
 #: navoica_enroll/users/models.py:23
 msgid "Male"
-msgstr "Mężczyzna"
+msgstr ""
 
 #: navoica_enroll/users/models.py:24
 msgid "Female"
-msgstr "Kobieta"
+msgstr ""
 
 #: navoica_enroll/users/models.py:28
 msgid "For people who do not have a PESEL number, type in NONE."
-msgstr "Podaj wiek w chwili przystąpienia do projektu"
+msgstr ""
 
 #: navoica_enroll/users/models.py:29
 msgid "Age"
-msgstr "Wiek"
+msgstr ""
 
 #: navoica_enroll/users/models.py:30
 msgid "Education"
-msgstr "Wykształcenie"
+msgstr ""
 
 #: navoica_enroll/users/models.py:32
 msgid "Pre-primary"
-msgstr "Niższe niż podstawowe"
+msgstr ""
 
 #: navoica_enroll/users/models.py:34
 msgid "Secondary"
-msgstr "Gimnazjalne"
+msgstr ""
 
 #: navoica_enroll/users/models.py:35
 msgid "High school"
-msgstr "Policealne"
+msgstr ""
 
 #: navoica_enroll/users/models.py:36
 msgid "Higher"
-msgstr "Wyższe"
+msgstr ""
 
 #: navoica_enroll/users/models.py:39
 msgid "Street"
-msgstr "Ulica"
+msgstr ""
 
 #: navoica_enroll/users/models.py:40
 msgid "Enter the address correspondence."
-msgstr "Należy podać adres kontaktowy, korespondencyjny."
+msgstr ""
 
 #: navoica_enroll/users/models.py:41
 msgid "Street no"
-msgstr "Nr budynku"
+msgstr ""
 
 #: navoica_enroll/users/models.py:42 navoica_enroll/users/models.py:44
 msgid "May contain letters"
-msgstr "Może zawierać litery"
+msgstr ""
 
 #: navoica_enroll/users/models.py:43
 msgid "Building no"
-msgstr "Nr lokalu"
+msgstr ""
 
 #: navoica_enroll/users/models.py:46
 msgid "City"
-msgstr "Miejscowość"
+msgstr ""
 
 #: navoica_enroll/users/models.py:47
 msgid "Voivodeship"
-msgstr "Województwo"
+msgstr ""
 
 #: navoica_enroll/users/models.py:51
 msgid "County"
-msgstr "Powiat"
+msgstr ""
 
 #: navoica_enroll/users/models.py:54
 msgid "Commune"
-msgstr "Gmina"
+msgstr ""
 
 #: navoica_enroll/users/models.py:57
 msgid "Country"
-msgstr "Kraj"
+msgstr ""
 
 #: navoica_enroll/users/models.py:60
 msgid "Phone"
-msgstr "Telefon kontaktowy"
+msgstr ""
 
 #: navoica_enroll/users/models.py:61
 msgid "Provide the contact telephone number."
-msgstr "Należy podać numer telefonu do kontaktu."
+msgstr ""
 
 #: navoica_enroll/users/models.py:62
 msgid "E-mail"
-msgstr "Adres poczty elektronicznej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:63
 msgid "Enter the address mail for contact."
-msgstr "Wpisz adres e-mail do kontaktu."
+msgstr ""
 
 #: navoica_enroll/users/models.py:64
 msgid "Start project date"
-msgstr "Data rozpoczęcia udziału w projekcie"
+msgstr ""
 
 #: navoica_enroll/users/models.py:66
 msgid "End project date"
-msgstr "Data zakończenia udziału w projekcie"
+msgstr ""
 
 #: navoica_enroll/users/models.py:68
 msgid "Start support date"
-msgstr "Data rozpoczęcia otrzymania wsparcia"
+msgstr ""
 
 #: navoica_enroll/users/models.py:72
 msgid "Employed"
-msgstr "Osoba pracująca"
+msgstr ""
 
 #: navoica_enroll/users/models.py:73
 msgid "Registered unemployed"
-msgstr "Osoba bezrobotna zarejestrowana w ewidencji urzędów pracy"
+msgstr ""
 
 #: navoica_enroll/users/models.py:74
 msgid "Unregistered unemployed"
-msgstr "Osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy"
+msgstr ""
 
 #: navoica_enroll/users/models.py:75
 msgid "Unemployed, not looking for work"
-msgstr "Osoba bierna zawodowo"
+msgstr ""
 
 #: navoica_enroll/users/models.py:78
 msgid "Status"
-msgstr "Status na rynku pracy osoby w chwili przystąpienia do projektu"
+msgstr ""
 
 #: navoica_enroll/users/models.py:83
 msgid "Vocational teacher"
-msgstr "Nauczyciel kształcenia zawodowego"
+msgstr ""
 
 #: navoica_enroll/users/models.py:84
 msgid "General education teacher"
-msgstr "Nauczyciel kształcenia ogólnego"
+msgstr ""
 
 #: navoica_enroll/users/models.py:85
 msgid "Kindergarten teacher"
-msgstr "Nauczyciel wychowania przedszkolnego"
+msgstr ""
 
 #: navoica_enroll/users/models.py:86
 msgid "Employee in higher education institution"
-msgstr "Pracownik instytucji szkolnictwa wyższego"
+msgstr ""
 
 #: navoica_enroll/users/models.py:87
 msgid "Labor market institution employee"
-msgstr "Pracownik instytucji rynku pracy"
+msgstr ""
 
 #: navoica_enroll/users/models.py:88
 msgid "Health care worker"
-msgstr "Pracownik instytucji systemu ochrony zdrowia"
+msgstr ""
 
 #: navoica_enroll/users/models.py:89
 msgid "Farmer"
-msgstr "Rolnik"
+msgstr ""
 
 #: navoica_enroll/users/models.py:90
 msgid "Key employee in social assistance and integration institution"
-msgstr "Kluczowy pracownik instytucji pomocy i integracji społecznej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:91
 msgid "Employee in family and foster care support institution"
-msgstr "Pracownik instytucji systemu wspierania rodziny i pieczy zastępczej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:92
 msgid "Employee in social economy support center"
-msgstr "Pracownik ośrodka wsparcia ekonomii społecznej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:93
 msgid "Employee in psychological and pedagogical counseling center"
-msgstr "Pracownik poradni psychologiczno-pedagogicznej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:94
 msgid "Practical vocational instructor"
-msgstr "Instruktor praktycznej nauki zawodu"
+msgstr ""
 
 #: navoica_enroll/users/models.py:95
 msgid "Other"
-msgstr "inny"
+msgstr ""
 
 #: navoica_enroll/users/models.py:98
 msgid "Profession"
-msgstr "Wykonywany zawód"
+msgstr ""
 
 #: navoica_enroll/users/models.py:102
 msgid "Job title"
-msgstr "Nazwa zakładu pracy"
+msgstr ""
 
 #: navoica_enroll/users/models.py:103
 msgid "Abbreviations not allowed, full name of the institution"
-msgstr "Skróty nie dopuszczane, pełna nazwa instytucji"
+msgstr ""
 
 #: navoica_enroll/users/models.py:104
 msgid "Migrant / ethnic minority"
 msgstr ""
-"Osoba należąca do mniejszości narodowej lub etnicznej, migrant, osoba obcego"
-" pochodzenia"
 
 #: navoica_enroll/users/models.py:106 navoica_enroll/users/models.py:113
 #: navoica_enroll/users/models.py:120 navoica_enroll/users/models.py:127
 msgid "Yes"
-msgstr "Tak"
+msgstr ""
 
 #: navoica_enroll/users/models.py:107 navoica_enroll/users/models.py:114
 #: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
 msgid "No"
-msgstr "Nie"
+msgstr ""
 
 #: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:115
 #: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
 msgid "Prefer not to tell"
-msgstr "Odmowa"
+msgstr ""
 
 #: navoica_enroll/users/models.py:112
 msgid "Homeless"
-msgstr "Osoba bezdomna lub dotknięta wykluczeniem z dostępu do mieszkań"
+msgstr ""
 
 #: navoica_enroll/users/models.py:118
 msgid "Disabled person"
-msgstr "Osoba z niepełnosprawnościami"
+msgstr ""
 
 #: navoica_enroll/users/models.py:125
 msgid "Socially disadvantaged"
-msgstr "Osoba w innej niekorzystnej sytuacji społecznej"
+msgstr ""
 
 #: navoica_enroll/users/models.py:142
 msgid "Registration for course"
-msgstr "Rejestracje na kurs"
+msgstr ""
 
 #: navoica_enroll/users/models.py:143
 msgid "Registrations for course"
-msgstr "Rejestracje na kurs "
+msgstr ""
 
 #: navoica_enroll/users/views.py:43
 msgid "Infos successfully updated"
-msgstr "Informacja zaaktualizowana"
+msgstr ""
 
 #: navoica_enroll/users/views.py:126
 msgid "Course does not exist"
-msgstr "Kurs nie istnieje"
+msgstr ""
 
 #: navoica_enroll/users/views.py:146
 msgid "You are already enrolled in this course"
-msgstr "Jesteś już zapisany/a na kurs"
+msgstr ""
