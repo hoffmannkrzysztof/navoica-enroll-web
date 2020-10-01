@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # 
 #, fuzzy
@@ -11,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-30 09:07+0200\n"
+"POT-Creation-Date: 2020-09-30 12:04+0200\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
 "Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -24,6 +25,38 @@ msgstr ""
 #: navoica_enroll/providers/edx/provider.py:14
 msgid "Log in to Navoica.pl"
 msgstr "Zaloguj się na Navoica.pl"
+
+#: navoica_enroll/templates/403.html:3 navoica_enroll/templates/403.html:6
+msgid "Forbidden (403)"
+msgstr "Zabronione (403)"
+
+#: navoica_enroll/templates/404.html:3 navoica_enroll/templates/404.html:6
+msgid "Page not found"
+msgstr "Nie znaleziono strony"
+
+#: navoica_enroll/templates/404.html:8
+msgid "This is not the page you were looking for."
+msgstr "To nie jest strona, której szukasz."
+
+#: navoica_enroll/templates/500.html:3
+msgid "Server Error"
+msgstr "Błąd Serwera"
+
+#: navoica_enroll/templates/500.html:6
+msgid "Ooops!!! 500"
+msgstr "Ups!!! 500"
+
+#: navoica_enroll/templates/500.html:8
+msgid "Looks like something went wrong!"
+msgstr "Coś poszło nie tak!"
+
+#: navoica_enroll/templates/500.html:10
+msgid ""
+"We track these errors automatically, but if the problem persists feel free "
+"to contact us. In the meantime, try refreshing."
+msgstr ""
+"Śledzimy te błędy automatycznie, ale jeśli problem będzie się powtarzał, "
+"skontaktuj się z nami. W międzyczasie spróbuj odświeżyć stronę."
 
 #: navoica_enroll/templates/account/account_inactive.html:5
 #: navoica_enroll/templates/account/account_inactive.html:8
@@ -44,36 +77,36 @@ msgstr "Adresy email"
 
 #: navoica_enroll/templates/account/email.html:12
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Z Twoim kontem powiązane są następujące adresy e-mail:"
 
 #: navoica_enroll/templates/account/email.html:30
 msgid "Verified"
-msgstr ""
+msgstr "Zweryfikowane"
 
 #: navoica_enroll/templates/account/email.html:32
 msgid "Unverified"
-msgstr ""
+msgstr "Niezweryfikowane"
 
 #: navoica_enroll/templates/account/email.html:35
 #: navoica_enroll/users/models.py:33
 msgid "Primary"
-msgstr ""
+msgstr "Primary"
 
 #: navoica_enroll/templates/account/email.html:42
 msgid "Make Primary"
-msgstr ""
+msgstr "Make Primary"
 
 #: navoica_enroll/templates/account/email.html:44
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Wyślij weryfikację ponownie"
 
 #: navoica_enroll/templates/account/email.html:46
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: navoica_enroll/templates/account/email.html:54
 msgid "Warning:"
-msgstr ""
+msgstr "Uwaga:"
 
 #: navoica_enroll/templates/account/email.html:54
 msgid ""
@@ -81,23 +114,25 @@ msgid ""
 "an e-mail address so you can receive notifications, reset your password, "
 "etc."
 msgstr ""
+"Aktualnie nie masz skonfigurowanego żadnego adresu e-mail. Powinieneś dodać "
+"adres e-mail, aby móc otrzymywać powiadomienia, resetować hasło itd."
 
 #: navoica_enroll/templates/account/email.html:60
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "Dodaj adres e-mail"
 
 #: navoica_enroll/templates/account/email.html:66
 msgid "Add E-mail"
-msgstr ""
+msgstr "Dodaj e-mail"
 
 #: navoica_enroll/templates/account/email.html:76
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "Czy na pewno chcesz usunąć zaznaczony adres e-mail?"
 
 #: navoica_enroll/templates/account/email_confirm.html:6
 #: navoica_enroll/templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Potwierdź adres e-mail"
 
 #: navoica_enroll/templates/account/email_confirm.html:16
 #, python-format
@@ -106,10 +141,13 @@ msgid ""
 "      confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail\n"
 "      address for user %(user_display)s."
 msgstr ""
+"Czy możesz\n"
+"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-mail\n"
+"      użytkownika %(user_display)s?"
 
 #: navoica_enroll/templates/account/email_confirm.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Potwierdzam"
 
 #: navoica_enroll/templates/account/email_confirm.html:31
 #, python-format
@@ -119,10 +157,14 @@ msgid ""
 "      <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>\n"
 "      ."
 msgstr ""
+"Ten link potwierdzający e-mail wygasł lub jest nieprawidłowy.\n"
+"      Proszę\n"
+"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu e-mail</a>\n"
+"      "
 
 #: navoica_enroll/templates/account/login.html:7
 msgid "Sign In"
-msgstr ""
+msgstr "Zaloguj się"
 
 #: navoica_enroll/templates/account/login.html:17
 msgid ""
@@ -153,16 +195,18 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "      <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Nie masz jeszcze konta?\n"
+"      <a href=\"%(signup_url)s\">zarejestruj się</a> najpierw."
 
 #: navoica_enroll/templates/account/logout.html:5
 #: navoica_enroll/templates/account/logout.html:8
 #: navoica_enroll/templates/account/logout.html:18
 msgid "Sign Out"
-msgstr ""
+msgstr "Wyloguj się"
 
 #: navoica_enroll/templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Czy na pewno chcesz się wylogować?"
 
 #: navoica_enroll/templates/account/password_change.html:6
 #: navoica_enroll/templates/account/password_change.html:9
@@ -172,40 +216,46 @@ msgstr ""
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:4
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:7
 msgid "Change Password"
-msgstr ""
+msgstr "Zmień hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:7
 #: navoica_enroll/templates/account/password_reset.html:11
 #: navoica_enroll/templates/account/password_reset_done.html:6
 #: navoica_enroll/templates/account/password_reset_done.html:9
 msgid "Password Reset"
-msgstr ""
+msgstr "Zresetuj hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you"
 " an e-mail allowing you to reset it."
 msgstr ""
+"Zapomniałeś/aś swojego hasła? Wpisz poniżej swój adres e-mail, a my wyślemy "
+"Ci e-mail umożliwiający jego zresetowanie."
 
 #: navoica_enroll/templates/account/password_reset.html:23
 msgid "Reset My Password"
-msgstr ""
+msgstr "Zresetuj moje hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:26
 msgid ""
 "Please contact us if you have any trouble resetting your\n"
 "    password."
 msgstr ""
+"Skontaktuj się z nami, jeśli masz jakikolwiek sposób z resetowaniem swojego\n"
+"    hasła."
 
 #: navoica_enroll/templates/account/password_reset_done.html:15
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not\n"
 "    receive it within a few minutes."
 msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail. Skontaktuj się z nami jeśli nie\n"
+"    otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
-msgstr ""
+msgstr "Bad Token"
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:13
 #, python-format
@@ -215,30 +265,34 @@ msgid ""
 "      <a href=\"%(passwd_reset_url)s\">new password reset</a>\n"
 "      ."
 msgstr ""
+"Link do resetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że\n"
+"      został już użyty.  Wystąp z prośbą o\n"
+"      <a href=\"%(passwd_reset_url)s\">ponowny reset hasła</a>\n"
+"      ."
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:23
 msgid "change password"
-msgstr ""
+msgstr "zmień hasło"
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:26
 #: navoica_enroll/templates/account/password_reset_from_key_done.html:8
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Twoje hasło zostało zmienione."
 
 #: navoica_enroll/templates/account/password_set.html:6
 #: navoica_enroll/templates/account/password_set.html:9
 #: navoica_enroll/templates/account/password_set.html:16
 msgid "Set Password"
-msgstr ""
+msgstr "Ustaw hasło"
 
 #: navoica_enroll/templates/account/signup.html:6
 msgid "Signup"
-msgstr ""
+msgstr "Rejestracja"
 
 #: navoica_enroll/templates/account/signup.html:9
 #: navoica_enroll/templates/account/signup.html:22
 msgid "Sign Up"
-msgstr ""
+msgstr "Zarejestruj się"
 
 #: navoica_enroll/templates/account/signup.html:11
 #, python-format
@@ -246,22 +300,24 @@ msgid ""
 "Already have an account? Then please\n"
 "    <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
+"Posiadasz już konto? Kliknij tutaj i\n"
+"    <a href=\"%(login_url)s\">zaloguj się</a>."
 
 #: navoica_enroll/templates/account/signup_closed.html:5
 #: navoica_enroll/templates/account/signup_closed.html:8
 msgid "Sign Up Closed"
-msgstr ""
+msgstr "Zapisy zamknięte"
 
 #: navoica_enroll/templates/account/signup_closed.html:10
 msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
+msgstr "Przepraszamy, rejestracja jest obecnie zamknięta."
 
 #: navoica_enroll/templates/account/verification_sent.html:5
 #: navoica_enroll/templates/account/verification_sent.html:8
 #: navoica_enroll/templates/account/verified_email_required.html:5
 #: navoica_enroll/templates/account/verified_email_required.html:8
 msgid "Verify Your E-mail Address"
-msgstr ""
+msgstr "Zweryfikuj swój adres e-mail"
 
 #: navoica_enroll/templates/account/verification_sent.html:10
 msgid ""
@@ -269,6 +325,9 @@ msgid ""
 "    link provided to finalize the signup process. Please contact us if you do\n"
 "    not receive it within a few minutes."
 msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail w celach weryfikacjnych. Kliknij w\n"
+"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, jeśli\n"
+"    nie otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:12
 msgid ""
@@ -276,6 +335,9 @@ msgid ""
 "    you are who you claim to be. For this purpose, we require that you\n"
 "    verify ownership of your e-mail address. "
 msgstr ""
+"Ta część strony wymaga od nas weryfikacji, czy\n"
+"    jesteś tym, za kogo się podajesz. W tym celu wymagamy od Ciebie\n"
+"    weryfikacji swojego adresu e-mail. "
 
 #: navoica_enroll/templates/account/verified_email_required.html:16
 msgid ""
@@ -284,6 +346,10 @@ msgid ""
 "    contact us if you do not receive it within a few\n"
 "    minutes."
 msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail w celach\n"
+"    weryfikacyjnych. Kliknij w link znajdujący się w tej wiadomości e-mail.\n"
+"    Skontaktuj się z nami, jeśli nie otrzymasz jej w przeciągu kilku\n"
+"    minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:21
 #, python-format
@@ -291,6 +357,8 @@ msgid ""
 "<strong>Note:</strong> you can still\n"
 "    <a href=\"%(email_url)s\">change your e-mail address</a>."
 msgstr ""
+"<strong>Uwaga:</strong> wciąż możesz\n"
+"    <a href=\"%(email_url)s\">zmienić swój adres e-mail</a>."
 
 #: navoica_enroll/templates/base.html:54
 msgid ""
@@ -321,6 +389,18 @@ msgstr ""
 "osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza "
 "zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
 
+#: navoica_enroll/templates/users/user_detail.html:4
+msgid "User: "
+msgstr "Użytkownik:"
+
+#: navoica_enroll/templates/users/user_detail.html:25
+msgid "My Info"
+msgstr "Moje informacje"
+
+#: navoica_enroll/templates/users/user_form.html:13
+msgid "Update"
+msgstr "Aktualizuj"
+
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
 msgstr "Użytkownicy"
@@ -331,7 +411,7 @@ msgstr "Ta nazwa jest już zajęta"
 
 #: navoica_enroll/users/forms.py:42 navoica_enroll/users/models.py:26
 msgid "PESEL"
-msgstr ""
+msgstr "PESEL"
 
 #: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:45
 msgid "Postal code"
