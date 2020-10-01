@@ -332,3 +332,4 @@ navoica_enroll/media/
 !.envs/.production_example/
 /compose/production/traefik/traefik.yml
 /external_static/
+.transifexrc

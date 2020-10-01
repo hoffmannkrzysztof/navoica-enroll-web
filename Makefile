@@ -51,3 +51,9 @@ start:
 	sleep 10
 	docker-compose -f production.yml exec django python manage.py migrate
 	docker-compose -f production.yml exec django python manage.py collectstatic --noinput --clear
+
+extract_translations: ## extract strings to be translated, outputting .po files
+	# Extract Python and Django template strings
+	mkdir -p locale/en/LC_MESSAGES/
+	rm -f locale/en/LC_MESSAGES/{django,text}.po
+	python manage.py makemessages -l en -v1 -d django

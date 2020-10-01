@@ -59,8 +59,36 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 user_redirect_view = UserRedirectView.as_view()
 
 
+class UserRegistrationCourseViewBase(FormView):
+    template_name = 'users/form_registration.html'
+    success_url = '/thanks/'
+    token = None
+    course_info = None
+
+    def get_form_class(self):
+        if self.request.LANGUAGE_CODE == 'pl':
+            return UserRegistrationCourseForm
+        return UserRegistrationCourseEnglishForm
+
+    def get_initial(self):
+        initial = super().get_initial()
+        if self.request.user.is_authenticated:
+            initial['email'] = self.request.user.email
+            initial['first_name'] = self.request.user.first_name
+            initial['last_name'] = self.request.user.last_name
+        if self.request.LANGUAGE_CODE:
+            initial['country'] = 'Polska'
+
+        return initial
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['course_info'] = self.course_info
+        return context
+
+
 @method_decorator(login_required, name='dispatch')
-class UserRegistrationCourseView(FormView):
+class UserRegistrationCourseView(UserRegistrationCourseViewBase):
     template_name = 'users/form_registration.html'
     success_url = '/thanks/'
     token = None
@@ -121,18 +149,6 @@ class UserRegistrationCourseView(FormView):
         return super(UserRegistrationCourseView, self).dispatch(request, *args,
                                                                 **kwargs)
 
-    def get_initial(self):
-        initial = super().get_initial()
-        initial['email'] = self.request.user.email
-        initial['first_name'] = self.request.user.first_name
-        initial['last_name'] = self.request.user.last_name
-        return initial
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['course_info'] = self.course_info
-        return context
-
     def form_valid(self, form):
 
         headers = {
@@ -157,16 +173,10 @@ class UserRegistrationCourseView(FormView):
         return super().form_valid(form)
 
 
-class UserRegistrationTestView(FormView):
-    template_name = 'users/form_registration.html'
-    success_url = '/thanks/'
-    token = None
-    course_info = None
-
-    def get_form_class(self):
-        if self.request.LANGUAGE_CODE == 'pl':
-            return UserRegistrationCourseForm
-        return UserRegistrationCourseEnglishForm
+class UserRegistrationTestView(UserRegistrationCourseViewBase):
+    course_info = {
+        "course_id": "ABC"
+    }
 
     def get_initial(self):
         initial = super().get_initial()
@@ -183,7 +193,7 @@ class UserRegistrationTestView(FormView):
     def form_valid(self, form):
         obj = form.save(commit=False)
         obj.user_id = 1
-        obj.course_id = "TestID"
+        obj.course_id = self.course_info['course_id']
         obj.language_code = self.request.LANGUAGE_CODE
         obj.save()
 
