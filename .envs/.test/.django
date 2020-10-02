@@ -1,0 +1,11 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=no
+IPYTHONDIR=/app/.ipython
+NAVOICA_URL=https://navoica.pl
+DOMAIN=enroll.navoica.pl
+
+#STATEMENT1_PDF=
+#STATEMENT2_PDF=
+#STATEMENT1_EN_PDF=
+#STATEMENT2_EN_PDF=
