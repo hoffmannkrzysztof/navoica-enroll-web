@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=enrollment_db
+POSTGRES_USER=hMUUitxPoCPhwlziPBKhSOHrYhnqDmij
+POSTGRES_PASSWORD=vYwgXRox9eGyZHmYBmvXAWcDHKKhOsdKc9M1OF0NPd8SgYgPPJwWNCi1JsWRjDqs
