@@ -76,10 +76,18 @@ class TestUserEnrollView(WebTest):
                      json={'is_active': False},
                      status_code=200)
 
+            ###polish form
             response = self.app.get(reverse('form', args=[self.course_id]), headers={'Accept-Language': 'pl'})
             self.assertEqual(response.status_code, 200)
             self.assertEqual(type(response.context['form']), UserRegistrationCourseForm)
+            # check if we have correct pdf files
+            self.assertIn(settings.STATEMENT1_PDF, response.context['form'].fields['statement1'].label, )
+            self.assertIn(settings.STATEMENT2_PDF, response.context['form'].fields['statement2'].label, )
 
+            ###english form
             response = self.app.get(reverse('form', args=[self.course_id]), headers={'Accept-Language': 'en'})
             self.assertEqual(response.status_code, 200)
             self.assertEqual(type(response.context['form']), UserRegistrationCourseEnglishForm)
+            # check if we have correct pdf files
+            self.assertIn(settings.STATEMENT1_EN_PDF, response.context['form'].fields['statement1'].label, )
+            self.assertIn(settings.STATEMENT2_EN_PDF, response.context['form'].fields['statement2'].label, )

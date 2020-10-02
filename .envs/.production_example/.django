@@ -10,6 +10,8 @@ NAVOICA_URL=https://navoica.pl
 
 #STATEMENT1_PDF=
 #STATEMENT2_PDF=
+#STATEMENT1_EN_PDF=
+#STATEMENT2_EN_PDF=
 
 # Security
 # ------------------------------------------------------------------------------
