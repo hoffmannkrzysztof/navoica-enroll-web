@@ -3,9 +3,9 @@ from crispy_forms.layout import ButtonHolder, Div, Fieldset, HTML, Layout, \
     Submit
 from django.conf import settings
 from django.contrib.auth import forms, get_user_model
-from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.exceptions import ValidationError
 from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField
+from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.forms import PLPESELField, PLPostalCodeField
 
