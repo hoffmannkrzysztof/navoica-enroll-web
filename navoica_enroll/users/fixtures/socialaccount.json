@@ -1,0 +1,39 @@
+[
+  {
+    "model": "socialaccount.socialapp",
+    "pk": 1,
+    "fields": {
+      "provider": "edx",
+      "name": "EdxTest",
+      "client_id": "0000000000000",
+      "secret": "",
+      "key": "",
+      "sites": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "socialaccount.socialaccount",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "provider": "edx",
+      "uid": "1",
+      "last_login": "2020-10-02T10:47:54.296Z",
+      "date_joined": "2020-10-02T10:47:54.296Z",
+      "extra_data": "{}"
+    }
+  },
+  {
+    "model": "socialaccount.socialtoken",
+    "pk": 1,
+    "fields": {
+      "app": 1,
+      "account": 1,
+      "token": "ABC",
+      "token_secret": "",
+      "expires_at": null
+    }
+  }
+]

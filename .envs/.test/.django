@@ -1,8 +1,8 @@
 # General
 # ------------------------------------------------------------------------------
-USE_DOCKER=yes
+USE_DOCKER=no
 IPYTHONDIR=/app/.ipython
-NAVOICA_URL=https://draft.navoica.pl
+NAVOICA_URL=https://navoica.pl
 DOMAIN=enroll.navoica.pl
 
 #STATEMENT1_PDF=

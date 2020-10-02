@@ -3,9 +3,9 @@ from crispy_forms.layout import ButtonHolder, Div, Fieldset, HTML, Layout, \
     Submit
 from django.conf import settings
 from django.contrib.auth import forms, get_user_model
-from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.exceptions import ValidationError
 from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField
+from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.forms import PLPESELField, PLPostalCodeField
 
@@ -240,3 +240,13 @@ class UserRegistrationCourseEnglishForm(UserRegistrationCourseFormBase
         self.fields['voivodeship'].required = False
         self.fields['county'].required = False
         self.fields['commune'].required = False
+
+        self.fields['statement1'].label = _(
+            "I agree with the project participant's declaration. <a href='{url}'>PDF</a>").format(
+            url=
+            static(settings.STATEMENT1_EN_PDF))
+
+        self.fields['statement2'].label = _(
+            "I consent to the processing of my personal data to participate in the project. <a href='{url}'>PDF</a>").format(
+            url=
+            static(settings.STATEMENT2_EN_PDF))

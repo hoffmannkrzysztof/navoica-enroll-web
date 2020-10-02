@@ -12,8 +12,12 @@ APPS_DIR = ROOT_DIR.path("navoica_enroll")
 
 env = environ.Env(
     NAVOICA_URL=(str, "https://navoica.pl"),
-    STATEMENT1_PDF=(str, 'pdfs/Wzór oświadczenia uczestnika Projektu.pdf'),
-    STATEMENT2_PDF=(str, 'pdfs/Przetwarzanie danych.pdf')
+
+    STATEMENT1_PDF=(str, 'pdfs/wzor_oswiadczenia_uczestnika_projektu.pdf'),
+    STATEMENT2_PDF=(str, 'pdfs/przetwarzanie_danych.pdf'),
+
+    STATEMENT1_EN_PDF=(str, 'pdfs/minimum_scope_of_the_participants_personal_data.pdf'),
+    STATEMENT2_EN_PDF=(str, 'pdfs/process_personal_data.pdf'),
 )
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -316,6 +320,8 @@ COURSE_KEY_REGEX = COURSE_KEY_PATTERN.replace('P<course_key_string>', ':')
 
 STATEMENT1_PDF = env.str("STATEMENT1_PDF")
 STATEMENT2_PDF = env.str("STATEMENT2_PDF")
+STATEMENT1_EN_PDF = env.str("STATEMENT1_EN_PDF")
+STATEMENT2_EN_PDF = env.str("STATEMENT2_EN_PDF")
 
 try:
     PLATFORM_VERSION = subprocess.check_output(

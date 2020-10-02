@@ -35,17 +35,19 @@ Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
 
 ## Podmiana plików PDF ze zgodami w formularzu
 
-Dodaj odpowiedni pliki do katalogu: `./external_static`
+Dodaj odpowiednie pliki do katalogu: `./external_static`
 
 Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
     
 "Wzór oświadczenia...":
 
     STATEMENT1_PDF=nazwa_pliku.pdf
+    STATEMENT1_EN_PDF=nazwa_pliku.pdf #wersja angielska
     
 "Przetwarzanie informacji":
 
     STATEMENT2_PDF=nazwa_pliku2.pdf
+    STATEMENT2_EN_PDF=nazwa_pliku.pdf #wersja angielska
     
 Zrestartuj aplikacje
 

@@ -329,6 +329,7 @@ navoica_enroll/media/
 .env
 .envs/*
 !.envs/.local/
+!.envs/.test/
 !.envs/.production_example/
 /compose/production/traefik/traefik.yml
 /external_static/

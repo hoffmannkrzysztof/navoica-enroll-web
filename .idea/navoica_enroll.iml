@@ -13,8 +13,10 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Remote Python 3.7.6 Docker Compose (django at [/Users/krzysztofhoffmann/PycharmProjects/navoica-enroll-web/local.yml])" jdkType="Python SDK" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/venv3" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (navoica-enroll-web)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
