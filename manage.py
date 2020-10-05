@@ -21,7 +21,6 @@ if __name__ == "__main__":
             )
 
         raise
-
     # This allows easy placement of apps within the interior
     # navoica_enroll directory.
     current_path = os.path.dirname(os.path.abspath(__file__))
