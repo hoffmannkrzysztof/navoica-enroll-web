@@ -26,5 +26,4 @@ if __name__ == "__main__":
     # navoica_enroll directory.
     current_path = os.path.dirname(os.path.abspath(__file__))
     sys.path.append(os.path.join(current_path, "navoica_enroll"))
-
     execute_from_command_line(sys.argv)
